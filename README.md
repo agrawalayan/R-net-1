@@ -58,14 +58,15 @@ python src/NP2P_trainer.py --config_path config.json
 where config.json is a JSON file containing all hyperparameters.
 We attach a sample [config](./config.json) file along with our repository.
 
-## To test or debug your Answer Generation model after training, change mode="train" to debug or test from params.py file and run the model.
+## To test or debug your Answer Generation model 
+After training, change mode="train" to debug or test from params.py file and run the model.
 
 ## For Evaluation purpose of Question Generation Model
 ```
 python NP2P_beam_decoder.py --model_prefix xxx --in_path yyy --out_path zzz --mode beam
 ```
 
-###Demo Purpose
+### Demo Purpose
 Run the script
 python inference.py
 
