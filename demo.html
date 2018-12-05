@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8"> 
+        <meta charset="UTF-8">
+
         <script>
             function hit(passage, question){
                 var xhr = new XMLHttpRequest();
                 xhr.open("POST", '/answer', true);
                 xhr.setRequestHeader("Content-type", "application/json");
                 xhr.onreadystatechange = function () {
+                    console.log("hii");
                     console.log(xhr.status);
                     if (xhr.readyState === 4 && xhr.status === 200) {
                         var json = JSON.parse(xhr.responseText);
                         console.log(json.answer);
-                        var ans = document.getElementById("answer");
+                        var ans = document.getElementById("print_answer");
                         ans.innerHTML = json.answer;
                     }
                 };
@@ -20,20 +22,64 @@
                 xhr.send(params);
                 console.log("sent");
             }
+
+            function ques(passage, answer,question){
+                var xhr = new XMLHttpRequest();
+                xhr.open("POST", '/question', true);
+                xhr.setRequestHeader("Content-type", "application/json");
+                xhr.onreadystatechange = function () {
+                    console.log(xhr.status);
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        var json = JSON.parse(xhr.responseText);
+                        console.log(json.question);
+                        var ans = document.getElementById("print_question");
+                        ans.innerHTML = json.question;
+                    }
+                };
+                var params = JSON.stringify({"answer": answer, "passage": passage, "question": question});
+                xhr.send(params);
+                console.log("sent");
+            }
         </script>
+
         <style>
-            body{
+            #passage{
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .Reading_Comprehension{
                 display: grid;
-                grid-template-columns: 7fr 3fr;
+                grid-template-columns: 5fr 5fr;
                 grid-template-rows: 9fr 1fr;
             }
         </style>
     </head>
     <body>
-        <textarea id='passage' placeholder='Your passage here'></textarea>
-        <textarea id='question' placeholder='Your Question here'></textarea>
-        <p id='answer'>Your answer appears here</p>
-        <button id='GetAnswer'>Get Answer</button>
+		<h1 align="center">Reading Comprehension Project</h1>
+        <textarea id='passage' placeholder='Your passage here' rows = "10" cols="100"></textarea>
+        <br>
+        <br>
+        <br>
+        <div class = "Reading_Comprehension">
+			
+            <div id = "answer_generation">
+				<h2 align="center">Answer Generation</h2>
+                <textarea id='question' placeholder='Your Question here' rows = "4" cols="60"></textarea>
+                <br>
+                <button id='GetAnswer'>Get Answer</button>
+                <p id='print_answer'>Generated Answer</p>
+            </div>
+            <div id = "question_generation">
+				<h2 align="center">Question Generation</h2>
+                <textarea id='question1' placeholder='Your Truth Question here' rows = "4" cols="60"></textarea>
+                <br>
+                <textarea id='answer' placeholder='Your Answer here' rows = "4" cols="60"></textarea>
+                <br>
+                <button id='GetQuestion'>Get Question</button>
+                <p id='print_question'>Generated Question</p>
+            </div>
+        </div>
         <script>
             var button = document.getElementById("GetAnswer");
             button.onclick = function (){
@@ -43,6 +89,18 @@
                 hit(para.value, ques.value);
 
             };
+
+            var button = document.getElementById("GetQuestion");
+            button.onclick = function (){
+                var para = document.getElementById("passage");
+                var ans = document.getElementById("answer");
+                var ques1 = document.getElementById("question1");
+                console.log("hitting");
+                console.log(ques1)
+                ques(para.value, ans.value, ques1.value);
+
+            };
         </script>
     </body>
+
 </html>

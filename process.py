@@ -10,7 +10,15 @@ import re
 import sys
 import os
 import argparse
+import tensorflow as tf
+import random
 
+
+import ujson as json
+from collections import Counter
+import numpy as np
+import os.path
+import io
 from tqdm import tqdm
 from params import Params
 
@@ -31,261 +39,30 @@ parser.add_argument('-r','--reduce_glove', default = False, type = str2bool, hel
 args = parser.parse_args()
 
 import spacy
-nlp = spacy.blank('en')
 
-def tokenize_corenlp(text):
-    parsed = nlp(text)
-    tokens = [i.text for i in parsed]
-    return tokens
-
-class data_loader(object):
-    def __init__(self,use_pretrained = None):
-        self.c_dict = {"_UNK":0}
-        self.w_dict = {"_UNK":0}
-        self.w_occurence = 0
-        self.c_occurence = 0
-        self.w_count = 1
-        self.c_count = 1
-        self.w_unknown_count = 0
-        self.c_unknown_count = 0
-        self.append_dict = True
-        self.invalid_q = 0
-
-        if use_pretrained:
-            self.append_dict = False
-            self.w_dict, self.w_count = self.process_glove(Params.glove_dir, self.w_dict, self.w_count, Params.emb_size)
-            self.c_dict, self.c_count = self.process_glove(Params.glove_char, self.c_dict, self.c_count, 300)
-            self.ids2word = {v: k for k, v in self.w_dict.iteritems()}
-            self.ids2char = {v: k for k, v in self.c_dict.iteritems()}
-
-    def ind2word(self,ids):
-        output = []
-        for i in ids:
-            output.append(str(self.ids2word[i]))
-        return " ".join(output)
-
-    def ind2char(self,ids):
-        output = []
-        for i in ids:
-            for j in i:
-                output.append(str(self.ids2char[j]))
-            output.append(" ")
-        return "".join(output)
-
-    def process_glove(self, wordvecs, dict_, count, emb_size):
-        print("Reading GloVe from: {}".format(wordvecs))
-        with codecs.open(wordvecs,"rb","utf-8") as f:
-            line = f.readline()
-            i = 0
-            while line:
-                vocab = line.split(" ")
-                if len(vocab) != emb_size + 1:
-                    line = f.readline()
-                    continue
-                vocab = normalize_text(''.join(vocab[0:-emb_size]).decode("utf-8"))
-                if vocab not in dict_:
-                    dict_[vocab] = count
-                line = f.readline()
-                count += 1
-                i += 1
-                if i % 100 == 0:
-                    sys.stdout.write("\rProcessing line %d       "%i)
-            print("")
-        return dict_, count
-
-    def process_json(self,file_dir,out_dir, write_ = True):
-        if not os.path.exists(out_dir):
-            os.makedirs(out_dir)
-        self.data = json.load(codecs.open(file_dir,"rb","utf-8"))
-        self.loop(self.data, out_dir, write_ = write_)
-        with codecs.open("dictionary.txt","wb","utf-8") as f:
-            for key, value in sorted(self.w_dict.iteritems(), key=lambda (k,v): (v,k)):
-                f.write("%s: %s" % (key, value) + "\n")
-
-    def loop(self, data, dir_ = Params.train_dir, write_ = True):
-        for topic in tqdm(data['data'],total = len(data['data'])):
-            for para in topic['paragraphs']:
-
-                words_c,chars_c = self.add_to_dict(para['context'])
-                if len(words_c) >= Params.max_p_len:
-                    continue
-
-                for qas in para['qas']:
-                    question = qas['question']
-                    words,chars = self.add_to_dict(question)
-                    if len(words) >= Params.max_q_len:
-                        continue
-                    ans = qas['answers'][0]
-                    ans_ids,_ = self.add_to_dict(ans['text'])
-                    answers = find_answer_index(words_c, ans_ids)
-                    for answer in answers:
-                        start_i, finish_i = answer
-                        if start_i == -1:
-                            self.invalid_q += 1
-                            continue
-                        if write_:
-                            write_file([str(start_i),str(finish_i)],dir_ + Params.target_dir)
-                            write_file(words,dir_ + Params.q_word_dir)
-                            write_file(chars,dir_ + Params.q_chars_dir)
-                            write_file(words_c,dir_ + Params.p_word_dir)
-                            write_file(chars_c,dir_ + Params.p_chars_dir)
-
-    def process_word(self,line):
-        for word in line:
-            word = word.replace(" ","").strip()
-            word = normalize_text(''.join(word).decode("utf-8"))
-            if word:
-                if not word in self.w_dict:
-                    self.w_dict[word] = self.w_count
-                    self.w_count += 1
-
-    def process_char(self,line):
-        for char in line.strip():
-            if char:
-                if char != " ":
-                    if not char in self.c_dict:
-                        self.c_dict[char] = self.c_count
-                        self.c_count += 1
-
-    def add_to_dict(self, line):
-        splitted_line = tokenize_corenlp(line)
-
-        if self.append_dict:
-            self.process_word(splitted_line)
-            self.process_char("".join(splitted_line))
-
-        words = []
-        chars = []
-        for i,word in enumerate(splitted_line):
-            word = word.replace(" ","").strip()
-            word = normalize_text(''.join(word).decode("utf-8"))
-            if word:
-                if i > 0:
-                    chars.append("_SPC")
-                for char in word:
-                    char = self.c_dict.get(char,self.c_dict["_UNK"])
-                    chars.append(str(char))
-                    self.c_occurence += 1
-                    if char == 0:
-                        self.c_unknown_count += 1
-
-                word = self.w_dict.get(word.strip().strip(" "),self.w_dict["_UNK"])
-                words.append(str(word))
-                self.w_occurence += 1
-                if word == 0:
-                    self.w_unknown_count += 1
-        return (words, chars)
-
-    def realtime_process(self, data):
-        p,q = data
-        p_max_word = Params.max_p_len
-        p_max_char = Params.max_char_len
-        q_max_word = Params.max_q_len
-        q_max_char = Params.max_char_len
-
-        pw,pc = self.add_to_dict(p)
-        qw,qc = self.add_to_dict(q)
-        p_word_len = [len(pw)]
-        q_word_len = [len(qw)]
-        pc, pcl = get_char_line(" ".join(pc))
-        qc, qcl = get_char_line(" ".join(qc))
-
-        p_word_ids = pad_data([pw],p_max_word)
-        q_word_ids = pad_data([qw],q_max_word)
-
-        p_word_len = np.reshape(np.asarray(p_word_len,np.int32),(-1,1))
-        q_word_len = np.reshape(np.asarray(q_word_len,np.int32),(-1,1))
-
-        p_char_len = pad_char_len([pcl], p_max_word, p_max_char)
-        q_char_len = pad_char_len([qcl], q_max_word, q_max_char)
-        p_char_ids = pad_char_data([pc],p_max_char,p_max_word)
-        q_char_ids = pad_char_data([qc],q_max_char,q_max_word)
-
-        shapes=[(p_max_word,),(q_max_word,),
-                (p_max_word,p_max_char,),(q_max_word,q_max_char,),
-                (1,),(1,),
-                (p_max_word,),(q_max_word,)]
+nlp = spacy.blank("en")
 
 
-        return ([p_word_ids, q_word_ids,
-                p_char_ids, q_char_ids,
-                p_word_len, q_word_len,
-                p_char_len, q_char_len], shapes)
+def tokenize_corenlp(sent):
+    doc = nlp(sent)
+    return [token.text for token in doc]
+
+def word_tokenize(sent):
+    doc = nlp(sent)
+    return [token.text for token in doc]
 
 
-def load_glove(dir_, name, vocab_size):
-    glove = np.zeros((vocab_size, Params.emb_size),dtype = np.float32)
-    with codecs.open(dir_,"rb","utf-8") as f:
-        line = f.readline()
-        i = 1
-        while line:
-            if i % 100 == 0:
-                sys.stdout.write("\rProcessing %d vocabs       "%i)
-            vector = line.split(" ")
-            if len(vector) != Params.emb_size + 1:
-                line = f.readline()
-                continue
-            name_ = vector[0]
-            vector = vector[-Params.emb_size:]
-            if vector:
-                try:
-                    vector = [float(n) for n in vector]
-                except:
-                    assert 0
-                vector = np.asarray(vector, np.float32)
-                try:
-                    glove[i] = vector
-                except:
-                    assert 0
-            line = f.readline()
-            i += 1
-    print("\n")
-    glove_map = np.memmap(Params.data_dir + name + ".np", dtype='float32', mode='write', shape=(vocab_size, Params.emb_size))
-    glove_map[:] = glove
-    del glove_map
-
-def reduce_glove(dir_, dict_):
-    glove_f = []
-    with codecs.open(dir_, "rb", "utf-8") as f:
-        line = f.readline()
-        i = 0
-        while line:
-            i += 1
-            if i % 100 == 0:
-                sys.stdout.write("\rProcessing %d vocabs       "%i)
-            vector = line.split(" ")
-            if len(vector) != Params.emb_size + 1:
-                line = f.readline()
-                continue
-            vocab = normalize_text(''.join(vector[0:-Params.emb_size]).decode("utf-8"))
-            if vocab not in dict_:
-                line = f.readline()
-                continue
-            glove_f.append(line)
-            line = f.readline()
-    print("\nTotal number of lines: {}\nReduced vocab size: {}".format(i, len(glove_f)))
-    with codecs.open(dir_, "wb", "utf-8") as f:
-        for line in glove_f[:-1]:
-            f.write(line)
-        f.write(glove_f[-1].strip("\n"))
-
-def find_answer_index(context, answer):
-    window_len = len(answer)
-    answers = []
-    if window_len == 1:
-        indices = [i for i, ctx in enumerate(context) if ctx == answer[0]]
-        for i in indices:
-            answers.append((i,i))
-        if not indices:
-            answers.append((-1,-1))
-        return answers
-    for i in range(len(context)):
-        if context[i:i+window_len] == answer:
-            answers.append((i, i + window_len))
-    if len(answers) == 0:
-        return [(-1, -1)]
-    else:
-        return answers
+def find_answer_index(text, tokens):
+    current = 0
+    spans = []
+    for token in tokens:
+        current = text.find(token, current)
+        if current < 0:
+            print("Token {} cannot be found".format(token))
+            raise Exception()
+        spans.append((current, current + len(token)))
+        current += len(token)
+    return spans
 
 def normalize_text(text):
     return unicodedata.normalize('NFD', text)
@@ -391,27 +168,239 @@ def max_value(inputlist):
                 max_val = val
     return max_val
 
+def process_json(filename, data_type, word_counter, char_counter):
+    print("Generating {} examples...".format(data_type))
+    examples = []
+    eval_examples = {}
+    total = 0
+    with open(filename, "r") as fh:
+        source = json.load(fh)
+        for article in tqdm(source["data"]):
+            for para in article["paragraphs"]:
+                context = para["context"].replace(
+                    "''", '" ').replace("``", '" ')
+                context_tokens = tokenize_corenlp(context)
+                context_chars = [list(token) for token in context_tokens]
+                spans = find_answer_index(context, context_tokens)
+                for token in context_tokens:
+                    word_counter[token] += len(para["qas"])
+                    for char in token:
+                        char_counter[char] += len(para["qas"])
+                for qa in para["qas"]:
+                    total += 1
+                    ques = qa["question"].replace(
+                        "''", '" ').replace("``", '" ')
+                    ques_tokens = tokenize_corenlp(ques)
+                    ques_chars = [list(token) for token in ques_tokens]
+                    for token in ques_tokens:
+                        word_counter[token] += 1
+                        for char in token:
+                            char_counter[char] += 1
+                    y1s, y2s = [], []
+                    answer_texts = []
+                    for answer in qa["answers"]:
+                        answer_text = answer["text"]
+                        answer_start = answer['answer_start']
+                        answer_end = answer_start + len(answer_text)
+                        answer_texts.append(answer_text)
+                        answer_span = []
+                        for idx, span in enumerate(spans):
+                            if not (answer_end <= span[0] or answer_start >= span[1]):
+                                answer_span.append(idx)
+                        y1, y2 = answer_span[0], answer_span[-1]
+                        y1s.append(y1)
+                        y2s.append(y2)
+                    example = {"context_tokens": context_tokens, "context_chars": context_chars, "ques_tokens": ques_tokens,
+                               "ques_chars": ques_chars, "y1s": y1s, "y2s": y2s, "id": total}
+                    examples.append(example)
+                    eval_examples[str(total)] = {
+                        "context": context, "spans": spans, "answers": answer_texts, "uuid": qa["id"]}
+        random.shuffle(examples)
+        print("{} questions in total".format(len(examples)))
+    return examples, eval_examples
+
+
+def process_glove(counter, data_type, limit=-1, emb_file=None, size=None, vec_size=None, token2idx_dict=None):
+    print("Generating {} embedding...".format(data_type))
+    embedding_dict = {}
+    filtered_elements = [k for k, v in counter.items() if v > limit]
+    if emb_file is not None:
+        assert size is not None
+        assert vec_size is not None
+        with io.open(emb_file, "r", encoding="utf-8") as fh:
+            for line in tqdm(fh, total=size):
+                array = line.split()
+                word = "".join(array[0:-vec_size])
+                vector = list(map(float, array[-vec_size:]))
+                if word in counter and counter[word] > limit:
+                    embedding_dict[word] = vector
+        print("{} / {} tokens have corresponding {} embedding vector".format(
+            len(embedding_dict), len(filtered_elements), data_type))
+    else:
+        assert vec_size is not None
+        for token in filtered_elements:
+            embedding_dict[token] = [np.random.normal(
+                scale=0.01) for _ in range(vec_size)]
+        print("{} tokens have corresponding embedding vector".format(
+            len(filtered_elements)))
+
+    NULL = "--NULL--"
+    OOV = "--OOV--"
+    token2idx_dict = {token: idx for idx, token in enumerate(
+        embedding_dict.keys(), 2)} if token2idx_dict is None else token2idx_dict
+    token2idx_dict[NULL] = 0
+    token2idx_dict[OOV] = 1
+    embedding_dict[NULL] = [0. for _ in range(vec_size)]
+    embedding_dict[OOV] = [0. for _ in range(vec_size)]
+    idx2emb_dict = {idx: embedding_dict[token]
+                    for token, idx in token2idx_dict.items()}
+    emb_mat = [idx2emb_dict[idx] for idx in range(len(idx2emb_dict))]
+    return emb_mat, token2idx_dict
+
+
+def realtime_process(config, examples, data_type, out_file, word2idx_dict, char2idx_dict, is_test=False):
+
+    para_limit = config.test_para_limit if is_test else config.para_limit
+    ques_limit = config.test_ques_limit if is_test else config.ques_limit
+    char_limit = config.char_limit
+
+    def filter_func(example, is_test=False):
+        return len(example["context_tokens"]) > para_limit or len(example["ques_tokens"]) > ques_limit
+
+    print("Processing {} examples...".format(data_type))
+    writer = tf.python_io.TFRecordWriter(out_file)
+    total = 0
+    total_ = 0
+    meta = {}
+    for example in tqdm(examples):
+        total_ += 1
+
+        if filter_func(example, is_test):
+            continue
+
+        total += 1
+        context_idxs = np.zeros([para_limit], dtype=np.int32)
+        context_char_idxs = np.zeros([para_limit, char_limit], dtype=np.int32)
+        ques_idxs = np.zeros([ques_limit], dtype=np.int32)
+        ques_char_idxs = np.zeros([ques_limit, char_limit], dtype=np.int32)
+        y1 = np.zeros([para_limit], dtype=np.float32)
+        y2 = np.zeros([para_limit], dtype=np.float32)
+
+        def _get_word(word):
+            for each in (word, word.lower(), word.capitalize(), word.upper()):
+                if each in word2idx_dict:
+                    return word2idx_dict[each]
+            return 1
+
+        def _get_char(char):
+            if char in char2idx_dict:
+                return char2idx_dict[char]
+            return 1
+
+        for i, token in enumerate(example["context_tokens"]):
+            context_idxs[i] = _get_word(token)
+
+        for i, token in enumerate(example["ques_tokens"]):
+            ques_idxs[i] = _get_word(token)
+
+        for i, token in enumerate(example["context_chars"]):
+            for j, char in enumerate(token):
+                if j == char_limit:
+                    break
+                context_char_idxs[i, j] = _get_char(char)
+
+        for i, token in enumerate(example["ques_chars"]):
+            for j, char in enumerate(token):
+                if j == char_limit:
+                    break
+                ques_char_idxs[i, j] = _get_char(char)
+
+        start, end = example["y1s"][-1], example["y2s"][-1]
+        y1[start], y2[end] = 1.0, 1.0
+
+        record = tf.train.Example(features=tf.train.Features(feature={
+                                  "context_idxs": tf.train.Feature(bytes_list=tf.train.BytesList(value=[context_idxs.tostring()])),
+                                  "ques_idxs": tf.train.Feature(bytes_list=tf.train.BytesList(value=[ques_idxs.tostring()])),
+                                  "context_char_idxs": tf.train.Feature(bytes_list=tf.train.BytesList(value=[context_char_idxs.tostring()])),
+                                  "ques_char_idxs": tf.train.Feature(bytes_list=tf.train.BytesList(value=[ques_char_idxs.tostring()])),
+                                  "y1": tf.train.Feature(bytes_list=tf.train.BytesList(value=[y1.tostring()])),
+                                  "y2": tf.train.Feature(bytes_list=tf.train.BytesList(value=[y2.tostring()])),
+                                  "id": tf.train.Feature(int64_list=tf.train.Int64List(value=[example["id"]]))
+                                  }))
+        writer.write(record.SerializeToString())
+    print("Build {} / {} instances of features in total".format(total, total_))
+    meta["total"] = total
+    writer.close()
+    return meta
+
+
+def save(filename, obj, message=None):
+    if message is not None:
+        print("Saving {}...".format(message))
+        with open(filename, "w") as fh:
+            json.dump(obj, fh)
+
+
+def convert_idx(text, tokens):
+    current = 0
+    spans = []
+    for token in tokens:
+        current = text.find(token, current)
+        if current < 0:
+            print("Token {} cannot be found".format(token))
+            raise Exception()
+        spans.append((current, current + len(token)))
+        current += len(token)
+    return spans
+
+
 def main():
     if args.reduce_glove:
-        print("Reducing Glove Matrix")
-        loader = data_loader(use_pretrained = False)
-        loader.process_json(Params.data_dir + "train-v1.1.json", out_dir = Params.train_dir, write_ = False)
-        loader.process_json(Params.data_dir + "dev-v1.1.json", out_dir = Params.dev_dir, write_ = False)
-        reduce_glove(Params.glove_dir, loader.w_dict)
-    with open(Params.data_dir + 'dictionary.pkl','wb') as dictionary:
-        loader = data_loader(use_pretrained = True)
-        print("Tokenizing training data.")
-        loader.process_json(Params.data_dir + "train-v1.1.json", out_dir = Params.train_dir)
-        print("Tokenizing dev data.")
-        loader.process_json(Params.data_dir + "dev-v1.1.json", out_dir = Params.dev_dir)
-        pickle.dump(loader, dictionary, pickle.HIGHEST_PROTOCOL)
-    print("Tokenizing complete")
-    if os.path.isfile(Params.data_dir + "glove.np"): exit()
-    load_glove(Params.glove_dir,"glove",vocab_size = loader.w_count)
-    load_glove(Params.glove_char,"glove_char", vocab_size = loader.c_count)
-    print("Processing complete")
-    print("Unknown word ratio: {} / {}".format(loader.w_unknown_count,loader.w_occurence))
-    print("Unknown character ratio: {} / {}".format(loader.c_unknown_count,loader.c_occurence))
+        word_counter, char_counter = Counter(), Counter()
+        train_examples, train_eval = process_json(
+            Params.data_dir + "train-v1.1.json", "train", word_counter, char_counter)
+        dev_examples, dev_eval = process_json(
+            Params.data_dir + "dev-v1.1.json", "dev", word_counter, char_counter)
+        test_examples, test_eval = process_json(
+            Params.data_dir + "dev-v1.1.json", "test", word_counter, char_counter)
+
+        word_emb_file = Params.fasttext_file + "wiki-news-300d-1M.vec"
+        char_emb_file = Params.glove_char if Params.pretrained_char else None
+        char_emb_size = Params.char_vocab_size if Params.pretrained_char else None
+        char_emb_dim = Params.emb_size if Params.pretrained_char else Params.char_emb_size
+
+        word2idx_dict = None
+        if os.path.isfile(Params.word2idx_file):
+            with open(Params.word2idx_file, "r") as fh:
+                word2idx_dict = json.load(fh)
+        word_emb_mat, word2idx_dict = process_glove(word_counter, "word", emb_file=word_emb_file,
+                                                    size=Params.glove_word_size, vec_size=Params.emb_size,
+                                                    token2idx_dict=word2idx_dict)
+
+        char2idx_dict = None
+        if os.path.isfile(Params.char2idx_file):
+            with open(Params.char2idx_file, "r") as fh:
+                char2idx_dict = json.load(fh)
+        char_emb_mat, char2idx_dict = process_glove(
+            char_counter, "char", emb_file=char_emb_file, size=char_emb_size, vec_size=char_emb_dim,
+            token2idx_dict=char2idx_dict)
+
+        realtime_process(Params, train_examples, "train",
+                       Params.train_record_file, word2idx_dict, char2idx_dict)
+        dev_meta = realtime_process(Params, dev_examples, "dev",
+                                  Params.dev_record_file, word2idx_dict, char2idx_dict)
+        test_meta = realtime_process(Params, test_examples, "test",
+                                   Params.test_record_file, word2idx_dict, char2idx_dict, is_test=True)
+
+        save(Params.word_emb_file, word_emb_mat, message="word embedding")
+        save(Params.char_emb_file, char_emb_mat, message="char embedding")
+        save(Params.train_eval_file, train_eval, message="train eval")
+        save(Params.dev_eval_file, dev_eval, message="dev eval")
+        save(Params.test_eval_file, test_eval, message="test eval")
+        save(Params.dev_meta, dev_meta, message="dev meta")
+        save(Params.word2idx_file, word2idx_dict, message="word2idx")
+        save(Params.char2idx_file, char2idx_dict, message="char2idx")
+        save(Params.test_meta, test_meta, message="test meta")
 
 if __name__ == "__main__":
     main()
