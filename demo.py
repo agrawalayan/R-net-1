@@ -3,11 +3,11 @@ import spacy
 import os
 import numpy as np
 import ujson as json
-#import src/NP2P_beam_decoder as qg
+import string
+import re
 import sys
 sys.path.insert(0, 'src')
 import NP2P_beam_decoder as qg
-#from src import NP2P_beam_decoder as qg
 from params import Params
 from data_load import cudnn_gru, native_gru, dot_attention, summ, ptr_net
 from process import word_tokenize, convert_idx
@@ -134,17 +134,16 @@ class Inference(object):
             self.word2idx_dict = json.load(fh)
         with open(Params.char2idx_file, "r") as fh:
             self.char2idx_dict = json.load(fh)
-        #print("hiiiii")
+        
         self.model = InfModel(self.word_mat, self.char_mat)
-        #print("helllllooooo")
+        
         sess_config = tf.ConfigProto(allow_soft_placement=True)
         sess_config.gpu_options.allow_growth = True
         self.sess = tf.Session(config=sess_config)
         saver = tf.train.Saver()
-        #print("-------")
+        
         saver.restore(self.sess, tf.train.latest_checkpoint(Params.save_dir))
-        #saver.restore(self.sess, tf.train.import_meta_graph(Params.save_dir, clear_devices=True))
-        #print("endeddddd")
+        
 
     def response(self, context, question):
         sess = self.sess
@@ -208,6 +207,25 @@ class Inference(object):
                 ques_char_idxs[0, i, j] = _get_char(char)
         return spans, context_idxs, ques_idxs, context_char_idxs, ques_char_idxs
 
+def normalize_answer(s):
+    """Lower text and remove punctuation, articles and extra whitespace."""
+    def remove_articles(text):
+        return re.sub(r'\b(a|an|the)\b', ' ', text)
+
+    def white_space_fix(text):
+        return ' '.join(text.split())
+
+    def remove_punc(text):
+        exclude = set(string.punctuation)
+        return ''.join(ch for ch in text if ch not in exclude)
+
+    def lower(text):
+        return text.lower()
+
+    return white_space_fix(remove_articles(remove_punc(lower(s))))
+
+def exact_match_score(prediction, ground_truth):
+    return (normalize_answer(prediction) == normalize_answer(ground_truth))
 
 
 @app.route('/answer',methods = ['POST'])
@@ -215,17 +233,12 @@ def answer():
     passage = request.json['passage']
     question = request.json['question']
     print(question)
-    #os.system("module load tensorflow/python2.7/1.5.0")
+    
     
     response = infer.response(passage, question)
-    #response = ""
+    
     print("Answer: {}".format(response))
-    # if not passage or not question:
-    #     exit()
-    #global query, response
-    #query = (passage, question)
-    #while not response:
-    #    sleep(0.1)
+    
     print("received response: {}".format(response))
     Final_response = {"answer": response}
     RESPONSE = json.dumps(Final_response)
@@ -238,26 +251,37 @@ def question():
     answer = request.json['answer']
     question = request.json['question']
     print(question)
-    #os.system("module swap cudnn  cudnn/9.0v7.3.0.29")
+    
     send_list = []
     file = open('data/test_sent_pre.json','w')
-    #text_string = '[{"text3":'+ str(answer) + ',"text1":' + str(passage) + ',"text2":' + str(question) + '}]'
+    
     text_string = [{"text3":passage, "text1":answer, "text2":question}]
     json.dump(text_string, file)
-    #send_list.append(test_sent_pre_json)
-    #test_sent_pre_json = "["+ test_sent_pre_json + "]"
-    #print(test_sent_pre_json)
     
-    #file.write(test_sent_pre_json)
     file.close()
-    qg.question_gen_run(["/scratch/aka398/R-net-new/logs/NP2P.mpqg_5","/scratch/aka398/R-net-new/data/test_sent_pre.json","/scratch/aka398/R-net-new/pred11.txt","beam"])
-    #os.system('python src/NP2P_beam_decoder.py --model_prefix /scratch/aka398/R-net-new/logs/NP2P.mpqg_5 --in_path /scratch/aka398/R-net-new/data/test_sent_pre.json --out_path /scratch/aka398/R-net-new/pred11.txt --mode beam')
+    qg.question_gen_run(["/scratch/aka398/QGChanged/logs/NP2P.mpqg_5","/scratch/aka398/QGChanged/data/test_sent_pre.json","/scratch/aka398/QGChanged/pred11.txt","beam"])
+    
     with open('pred11.txt') as pred11:
         questions = pred11.readlines()
-
-    print("Answer: {}".format(questions[-1]))
-    print("received response: {}".format(questions[-1]))
-    Final_response = {"question": questions[-1]}
+    score = 0
+    Full_Text_To_Html = ""
+    a = set(question.split())
+    question_generated = questions[-1]
+    for lines in questions:
+	lines = lines.replace("UNK",'')
+	lines = lines.replace("</s>\n",'')
+	
+	b = set(lines.split())
+	c = a.intersection(b)
+	new_score = float(len(c)) / (len(a) + len(b) - len(c))
+	Full_Text_To_Html += lines + "<br>"
+	if new_score > score:
+	    score = new_score
+	    question_generated = "<b>Best Question:</b> "+ lines
+    print("Answer: {}".format(question_generated))
+    print("received response: {}".format(question_generated))
+    Full_Text_To_Html = Full_Text_To_Html + question_generated
+    Final_response = {"question": Full_Text_To_Html}
     RESPONSE = json.dumps(Final_response)
     response = []
     return RESPONSE
