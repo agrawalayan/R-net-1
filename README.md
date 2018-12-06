@@ -12,7 +12,9 @@ The dataset used for this task is Stanford Question Answering Dataset (https://r
   * NumPy
   * tqdm
   * spacy
-  * TensorFlow==1.2
+  * tensorflow-gpu==1.12
+  *	graphviz
+  * pythonrogue
 
 # Downloads and Setup
 Once you clone this repo, run the following lines from bash **just once** to process the dataset (SQuAD).
