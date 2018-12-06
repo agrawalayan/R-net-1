@@ -1,4 +1,4 @@
-# R-NET: MACHINE READING COMPREHENSION WITH SELF MATCHING NETWORKS
+# Dual Question-AnswerGeneratorforMachineReadingComprehension
 
 Tensorflow implementation of https://www.microsoft.com/en-us/research/wp-content/uploads/2017/05/r-net.pdf
 ![Alt text](/../master/screenshots/architecture.png?raw=true "R-NET")
@@ -25,14 +25,12 @@ $ pipenv shell
 $ python process.py --reduce_glove True --process True
 ```
 
-# Leveraging Context Information for Natural Question Generation
+# Question Generation
 This repository contains the code for our paper [Leveraging Context Information for Natural Question Generation](http://www.aclweb.org/anthology/N18-2090)
-
-The code is developed under TensorFlow 1.4.1
 
 ## Data
 
-We release our data [here](https://www.cs.rochester.edu/~lsong10/downloads/nqg_data.tgz)
+Data [here](https://www.cs.rochester.edu/~lsong10/downloads/nqg_data.tgz)
 
 ### Data format
 
