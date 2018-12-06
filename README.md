@@ -3,6 +3,7 @@
 Answer Generation Implementation - https://www.microsoft.com/en-us/research/wp-content/uploads/2017/05/r-net.pdf
 Question Generation Implementation - http://www.aclweb.org/anthology/N18-2090
 ![Alt text](/../master/screenshots/architecture.png?raw=true "R-NET")
+![Alt text](/../master/screenshots/architecture_2.png?raw=true "R-NET")
 
 
 
