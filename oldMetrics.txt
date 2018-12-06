@@ -1,0 +1,2120 @@
+=============Epoch: 1
+
+Train_loss: 2.70436120033
+Dev_loss: 2.76105761528
+Dev_Exact_match: 0.38
+Dev_F1_score: 0.548696692197
+
+Train_loss: 1.97112631798
+Dev_loss: 2.70436120033
+Dev_Exact_match: 0.49
+Dev_F1_score: 0.651705510176
+
+Train_loss: 2.3328602314
+Dev_loss: 1.97112631798
+Dev_Exact_match: 0.41
+Dev_F1_score: 0.546891441891
+
+Train_loss: 2.40339851379
+Dev_loss: 2.3328602314
+Dev_Exact_match: 0.38
+Dev_F1_score: 0.511075702076
+
+Train_loss: 2.65783214569
+Dev_loss: 2.40339851379
+Dev_Exact_match: 0.37
+Dev_F1_score: 0.528363936064
+
+Train_loss: 2.5358338356
+Dev_loss: 2.65783214569
+Dev_Exact_match: 0.4
+Dev_F1_score: 0.55929582509
+
+Train_loss: 2.56909155846
+Dev_loss: 2.5358338356
+Dev_Exact_match: 0.45
+Dev_F1_score: 0.559359934751
+
+Train_loss: 2.06540727615
+Dev_loss: 2.56909155846
+Dev_Exact_match: 0.52
+Dev_F1_score: 0.656259398496
+
+Train_loss: 2.82236027718
+Dev_loss: 2.06540727615
+Dev_Exact_match: 0.33
+Dev_F1_score: 0.500224053724
+
+Train_loss: 2.41477441788
+Dev_loss: 2.82236027718
+Dev_Exact_match: 0.37
+Dev_F1_score: 0.589568436465
+
+Train_loss: 2.49491357803
+Dev_loss: 2.41477441788
+Dev_Exact_match: 0.45
+Dev_F1_score: 0.549294261294
+
+Train_loss: 2.32533884048
+Dev_loss: 2.49491357803
+Dev_Exact_match: 0.43
+Dev_F1_score: 0.572547770502
+
+Train_loss: 2.3368833065
+Dev_loss: 2.32533884048
+Dev_Exact_match: 0.37
+Dev_F1_score: 0.536509035409
+
+Train_loss: 2.67068719864
+Dev_loss: 2.3368833065
+Dev_Exact_match: 0.36
+Dev_F1_score: 0.490996317408
+
+Train_loss: 2.07883810997
+Dev_loss: 2.67068719864
+Dev_Exact_match: 0.47
+Dev_F1_score: 0.613108391608
+
+Train_loss: 2.46851468086
+Dev_loss: 2.07883810997
+Dev_Exact_match: 0.49
+Dev_F1_score: 0.593009379509
+
+Train_loss: 2.63082671165
+Dev_loss: 2.46851468086
+Dev_Exact_match: 0.45
+Dev_F1_score: 0.57165023865
+
+Train_loss: 2.28065276146
+Dev_loss: 2.63082671165
+Dev_Exact_match: 0.54
+Dev_F1_score: 0.653039183039
+
+Train_loss: 2.44200086594
+Dev_loss: 2.28065276146
+Dev_Exact_match: 0.48
+Dev_F1_score: 0.609036758563
+
+Train_loss: 2.53633570671
+Dev_loss: 2.44200086594
+Dev_Exact_match: 0.43
+Dev_F1_score: 0.546765678766
+
+Train_loss: 2.49029254913
+Dev_loss: 2.53633570671
+Dev_Exact_match: 0.49
+Dev_F1_score: 0.632147066384
+=============Epoch: 2
+
+Train_loss: 2.24132609367
+Dev_loss: 2.49029254913
+Dev_Exact_match: 0.5
+Dev_F1_score: 0.620792976202
+
+Train_loss: 2.75474596024
+Dev_loss: 2.24132609367
+Dev_Exact_match: 0.4
+Dev_F1_score: 0.51193629573
+
+Train_loss: 2.64495444298
+Dev_loss: 2.75474596024
+Dev_Exact_match: 0.44
+Dev_F1_score: 0.563575702076
+
+Train_loss: 2.32602834702
+Dev_loss: 2.64495444298
+Dev_Exact_match: 0.43
+Dev_F1_score: 0.563016076516
+
+Train_loss: 2.34060049057
+Dev_loss: 2.32602834702
+Dev_Exact_match: 0.4
+Dev_F1_score: 0.532387889888
+
+Train_loss: 2.34677481651
+Dev_loss: 2.34060049057
+Dev_Exact_match: 0.45
+Dev_F1_score: 0.567367649894
+
+Train_loss: 2.42499518394
+Dev_loss: 2.34677481651
+Dev_Exact_match: 0.44
+Dev_F1_score: 0.557810366792
+
+Train_loss: 2.32240176201
+Dev_loss: 2.42499518394
+Dev_Exact_match: 0.44
+Dev_F1_score: 0.550405372405
+
+Train_loss: 2.44336295128
+Dev_loss: 2.32240176201
+Dev_Exact_match: 0.41
+Dev_F1_score: 0.556458596959
+
+Train_loss: 2.15011310577
+Dev_loss: 2.44336295128
+Dev_Exact_match: 0.42
+Dev_F1_score: 0.586173732013
+
+Train_loss: 2.19282650948
+Dev_loss: 2.15011310577
+Dev_Exact_match: 0.44
+Dev_F1_score: 0.586328599179
+
+Train_loss: 2.75611209869
+Dev_loss: 2.19282650948
+Dev_Exact_match: 0.42
+Dev_F1_score: 0.572624670651
+
+Train_loss: 2.15643501282
+Dev_loss: 2.75611209869
+Dev_Exact_match: 0.45
+Dev_F1_score: 0.606365079365
+
+Train_loss: 2.42750072479
+Dev_loss: 2.15643501282
+Dev_Exact_match: 0.43
+Dev_F1_score: 0.57523953824
+
+Train_loss: 2.61207222939
+Dev_loss: 2.42750072479
+Dev_Exact_match: 0.47
+Dev_F1_score: 0.593130591631
+
+Train_loss: 2.58539891243
+Dev_loss: 2.61207222939
+Dev_Exact_match: 0.42
+Dev_F1_score: 0.517276556777
+
+Train_loss: 2.67039203644
+Dev_loss: 2.58539891243
+Dev_Exact_match: 0.4
+Dev_F1_score: 0.533084637585
+
+Train_loss: 2.50121593475
+Dev_loss: 2.67039203644
+Dev_Exact_match: 0.48
+Dev_F1_score: 0.584225108225
+
+Train_loss: 2.60376596451
+Dev_loss: 2.50121593475
+Dev_Exact_match: 0.52
+Dev_F1_score: 0.617052824953
+
+Train_loss: 2.23026323318
+Dev_loss: 2.60376596451
+Dev_Exact_match: 0.51
+Dev_F1_score: 0.644278897573
+
+Train_loss: 2.72362756729
+Dev_loss: 2.23026323318
+Dev_Exact_match: 0.45
+Dev_F1_score: 0.56926984127
+=============Epoch: 3
+
+Train_loss: 2.10338425636
+Dev_loss: 2.72362756729
+Dev_Exact_match: 0.48
+Dev_F1_score: 0.610695970696
+
+Train_loss: 2.31938052177
+Dev_loss: 2.10338425636
+Dev_Exact_match: 0.44
+Dev_F1_score: 0.611831113331
+
+Train_loss: 2.40232825279
+Dev_loss: 2.31938052177
+Dev_Exact_match: 0.41
+Dev_F1_score: 0.582429765006
+
+Train_loss: 2.52253484726
+Dev_loss: 2.40232825279
+Dev_Exact_match: 0.41
+Dev_F1_score: 0.540207015207
+
+Train_loss: 2.50546145439
+Dev_loss: 2.52253484726
+Dev_Exact_match: 0.42
+Dev_F1_score: 0.588408694247
+
+Train_loss: 2.62969565392
+Dev_loss: 2.50546145439
+Dev_Exact_match: 0.44
+Dev_F1_score: 0.58736384012
+
+Train_loss: 2.56005811691
+Dev_loss: 2.62969565392
+Dev_Exact_match: 0.42
+Dev_F1_score: 0.557655122655
+
+Train_loss: 2.56721615791
+Dev_loss: 2.56005811691
+Dev_Exact_match: 0.33
+Dev_F1_score: 0.500834776335
+
+Train_loss: 2.43648457527
+Dev_loss: 2.56721615791
+Dev_Exact_match: 0.47
+Dev_F1_score: 0.612484348984
+
+Train_loss: 2.93025946617
+Dev_loss: 2.43648457527
+Dev_Exact_match: 0.53
+Dev_F1_score: 0.597490842491
+
+Train_loss: 2.62748861313
+Dev_loss: 2.93025946617
+Dev_Exact_match: 0.42
+Dev_F1_score: 0.530060606061
+
+Train_loss: 2.41858124733
+Dev_loss: 2.62748861313
+Dev_Exact_match: 0.36
+Dev_F1_score: 0.553626922802
+
+Train_loss: 2.37427473068
+Dev_loss: 2.41858124733
+Dev_Exact_match: 0.46
+Dev_F1_score: 0.5604998335
+
+Train_loss: 2.73724675179
+Dev_loss: 2.37427473068
+Dev_Exact_match: 0.34
+Dev_F1_score: 0.49028460102
+
+Train_loss: 2.35246729851
+Dev_loss: 2.73724675179
+Dev_Exact_match: 0.48
+Dev_F1_score: 0.581122100122
+
+Train_loss: 2.35998439789
+Dev_loss: 2.35246729851
+Dev_Exact_match: 0.52
+Dev_F1_score: 0.653019268313
+
+Train_loss: 2.42831540108
+Dev_loss: 2.35998439789
+Dev_Exact_match: 0.43
+Dev_F1_score: 0.601067836532
+
+Train_loss: 2.31058073044
+Dev_loss: 2.42831540108
+Dev_Exact_match: 0.43
+Dev_F1_score: 0.591463200198
+
+Train_loss: 2.32069540024
+Dev_loss: 2.31058073044
+Dev_Exact_match: 0.4
+Dev_F1_score: 0.597050782551
+
+Train_loss: 2.61606264114
+Dev_loss: 2.32069540024
+Dev_Exact_match: 0.38
+Dev_F1_score: 0.550342379842
+
+Train_loss: 2.57856988907
+Dev_loss: 2.61606264114
+Dev_Exact_match: 0.38
+Dev_F1_score: 0.570150793651
+=============Epoch: 4
+
+Train_loss: 2.33554077148
+Dev_loss: 2.57856988907
+Dev_Exact_match: 0.43
+Dev_F1_score: 0.550160669396
+
+Train_loss: 2.30617713928
+Dev_loss: 2.33554077148
+Dev_Exact_match: 0.43
+Dev_F1_score: 0.551477957715
+
+Train_loss: 2.63121390343
+Dev_loss: 2.30617713928
+Dev_Exact_match: 0.37
+Dev_F1_score: 0.536776359313
+
+Train_loss: 2.21242189407
+Dev_loss: 2.63121390343
+Dev_Exact_match: 0.48
+Dev_F1_score: 0.606635531136
+
+Train_loss: 2.62451839447
+Dev_loss: 2.21242189407
+Dev_Exact_match: 0.44
+Dev_F1_score: 0.612326867577
+
+Train_loss: 2.34046459198
+Dev_loss: 2.62451839447
+Dev_Exact_match: 0.46
+Dev_F1_score: 0.587766206016
+
+Train_loss: 2.567309618
+Dev_loss: 2.34046459198
+Dev_Exact_match: 0.4
+Dev_F1_score: 0.52684836079
+
+Train_loss: 2.53851890564
+Dev_loss: 2.567309618
+Dev_Exact_match: 0.37
+Dev_F1_score: 0.519056499056
+
+Train_loss: 2.329631567
+Dev_loss: 2.53851890564
+Dev_Exact_match: 0.47
+Dev_F1_score: 0.600932067932
+
+Train_loss: 2.53962492943
+Dev_loss: 2.329631567
+Dev_Exact_match: 0.49
+Dev_F1_score: 0.56715638919
+
+Train_loss: 2.38530015945
+Dev_loss: 2.53962492943
+Dev_Exact_match: 0.46
+Dev_F1_score: 0.57101936299
+
+Train_loss: 2.14738726616
+Dev_loss: 2.38530015945
+Dev_Exact_match: 0.45
+Dev_F1_score: 0.583572150072
+
+Train_loss: 2.27855467796
+Dev_loss: 2.14738726616
+Dev_Exact_match: 0.49
+Dev_F1_score: 0.607342208766
+
+Train_loss: 2.54163265228
+Dev_loss: 2.27855467796
+Dev_Exact_match: 0.4
+Dev_F1_score: 0.546140748141
+
+Train_loss: 2.3853032589
+Dev_loss: 2.54163265228
+Dev_Exact_match: 0.49
+Dev_F1_score: 0.59055598813
+
+Train_loss: 2.57271170616
+Dev_loss: 2.3853032589
+Dev_Exact_match: 0.36
+Dev_F1_score: 0.504727355977
+
+Train_loss: 2.47914814949
+Dev_loss: 2.57271170616
+Dev_Exact_match: 0.41
+Dev_F1_score: 0.578651783889
+
+Train_loss: 2.45224308968
+Dev_loss: 2.47914814949
+Dev_Exact_match: 0.36
+Dev_F1_score: 0.499287462537
+
+Train_loss: 2.74420523643
+Dev_loss: 2.45224308968
+Dev_Exact_match: 0.42
+Dev_F1_score: 0.50129029304
+
+Train_loss: 2.51984071732
+Dev_loss: 2.74420523643
+Dev_Exact_match: 0.48
+Dev_F1_score: 0.632617986589
+
+Train_loss: 2.37823557854
+Dev_loss: 2.51984071732
+Dev_Exact_match: 0.43
+Dev_F1_score: 0.558796222783
+=============Epoch: 5
+
+Train_loss: 2.20699453354
+Dev_loss: 2.37823557854
+Dev_Exact_match: 0.49
+Dev_F1_score: 0.620973461321
+
+Train_loss: 2.55230402946
+Dev_loss: 2.20699453354
+Dev_Exact_match: 0.46
+Dev_F1_score: 0.571428571429
+
+Train_loss: 2.36992096901
+Dev_loss: 2.55230402946
+Dev_Exact_match: 0.52
+Dev_F1_score: 0.676131619842
+
+Train_loss: 2.8499853611
+Dev_loss: 2.36992096901
+Dev_Exact_match: 0.43
+Dev_F1_score: 0.583867826618
+
+Train_loss: 2.63137722015
+Dev_loss: 2.8499853611
+Dev_Exact_match: 0.4
+Dev_F1_score: 0.561316960817
+
+Train_loss: 2.49021029472
+Dev_loss: 2.63137722015
+Dev_Exact_match: 0.46
+Dev_F1_score: 0.5999407945
+
+Train_loss: 2.19751644135
+Dev_loss: 2.49021029472
+Dev_Exact_match: 0.54
+Dev_F1_score: 0.660484126984
+
+Train_loss: 2.58894944191
+Dev_loss: 2.19751644135
+Dev_Exact_match: 0.3
+Dev_F1_score: 0.470697746698
+
+Train_loss: 2.54210615158
+Dev_loss: 2.58894944191
+Dev_Exact_match: 0.37
+Dev_F1_score: 0.521847522848
+
+Train_loss: 2.67174267769
+Dev_loss: 2.54210615158
+Dev_Exact_match: 0.48
+Dev_F1_score: 0.587551520943
+
+Train_loss: 2.35570049286
+Dev_loss: 2.67174267769
+Dev_Exact_match: 0.49
+Dev_F1_score: 0.600710864806
+
+Train_loss: 2.3144068718
+Dev_loss: 2.35570049286
+Dev_Exact_match: 0.47
+Dev_F1_score: 0.619822275347
+
+Train_loss: 2.53568315506
+Dev_loss: 2.3144068718
+Dev_Exact_match: 0.45
+Dev_F1_score: 0.573317289033
+
+Train_loss: 2.59510707855
+Dev_loss: 2.53568315506
+Dev_Exact_match: 0.4
+Dev_F1_score: 0.550835550414
+
+Train_loss: 2.25573921204
+Dev_loss: 2.59510707855
+Dev_Exact_match: 0.45
+Dev_F1_score: 0.608296925297
+
+Train_loss: 2.60754680634
+Dev_loss: 2.25573921204
+Dev_Exact_match: 0.42
+Dev_F1_score: 0.4960995116
+
+Train_loss: 2.48173952103
+Dev_loss: 2.60754680634
+Dev_Exact_match: 0.44
+Dev_F1_score: 0.570572853073
+
+Train_loss: 2.51915025711
+Dev_loss: 2.48173952103
+Dev_Exact_match: 0.38
+Dev_F1_score: 0.532254147813
+
+Train_loss: 2.47088623047
+Dev_loss: 2.51915025711
+Dev_Exact_match: 0.45
+Dev_F1_score: 0.566195912215
+
+Train_loss: 3.15641593933
+Dev_loss: 2.47088623047
+Dev_Exact_match: 0.45
+Dev_F1_score: 0.588107601022
+
+Train_loss: 2.20661973953
+Dev_loss: 3.15641593933
+Dev_Exact_match: 0.46
+Dev_F1_score: 0.605291575092
+=============Epoch: 6
+
+Train_loss: 2.14416718483
+Dev_loss: 2.20661973953
+Dev_Exact_match: 0.46
+Dev_F1_score: 0.614154492566
+
+Train_loss: 2.4511256218
+Dev_loss: 2.14416718483
+Dev_Exact_match: 0.52
+Dev_F1_score: 0.594229930888
+
+Train_loss: 2.50973653793
+Dev_loss: 2.4511256218
+Dev_Exact_match: 0.44
+Dev_F1_score: 0.614771754815
+
+Train_loss: 2.38831543922
+Dev_loss: 2.50973653793
+Dev_Exact_match: 0.5
+Dev_F1_score: 0.586517112115
+
+Train_loss: 2.28367757797
+Dev_loss: 2.38831543922
+Dev_Exact_match: 0.5
+Dev_F1_score: 0.6579416082
+
+Train_loss: 2.57960534096
+Dev_loss: 2.28367757797
+Dev_Exact_match: 0.38
+Dev_F1_score: 0.577286435786
+
+Train_loss: 2.68529129028
+Dev_loss: 2.57960534096
+Dev_Exact_match: 0.39
+Dev_F1_score: 0.535925591952
+
+Train_loss: 2.66927933693
+Dev_loss: 2.68529129028
+Dev_Exact_match: 0.42
+Dev_F1_score: 0.569654025713
+
+Train_loss: 2.42439556122
+Dev_loss: 2.66927933693
+Dev_Exact_match: 0.44
+Dev_F1_score: 0.59859029859
+
+Train_loss: 2.18940639496
+Dev_loss: 2.42439556122
+Dev_Exact_match: 0.49
+Dev_F1_score: 0.624451362363
+
+Train_loss: 2.24183297157
+Dev_loss: 2.18940639496
+Dev_Exact_match: 0.47
+Dev_F1_score: 0.572335081585
+
+Train_loss: 2.67746019363
+Dev_loss: 2.24183297157
+Dev_Exact_match: 0.39
+Dev_F1_score: 0.534440458235
+
+Train_loss: 2.33790659904
+Dev_loss: 2.67746019363
+Dev_Exact_match: 0.45
+Dev_F1_score: 0.594131975867
+
+Train_loss: 2.41536688805
+Dev_loss: 2.33790659904
+Dev_Exact_match: 0.48
+Dev_F1_score: 0.580198412698
+
+Train_loss: 2.58181452751
+Dev_loss: 2.41536688805
+Dev_Exact_match: 0.45
+Dev_F1_score: 0.580788683539
+
+Train_loss: 2.24470567703
+Dev_loss: 2.58181452751
+Dev_Exact_match: 0.46
+Dev_F1_score: 0.596285597694
+
+Train_loss: 2.51446247101
+Dev_loss: 2.24470567703
+Dev_Exact_match: 0.49
+Dev_F1_score: 0.618350459482
+
+Train_loss: 2.38155555725
+Dev_loss: 2.51446247101
+Dev_Exact_match: 0.5
+Dev_F1_score: 0.613493506494
+
+Train_loss: 2.30885577202
+Dev_loss: 2.38155555725
+Dev_Exact_match: 0.48
+Dev_F1_score: 0.620947496947
+
+Train_loss: 2.46561980247
+Dev_loss: 2.30885577202
+Dev_Exact_match: 0.45
+Dev_F1_score: 0.555080697081
+
+Train_loss: 2.90713047981
+Dev_loss: 2.46561980247
+Dev_Exact_match: 0.39
+Dev_F1_score: 0.552058608059
+=============Epoch: 7
+
+Train_loss: 2.23925375938
+Dev_loss: 2.90713047981
+Dev_Exact_match: 0.49
+Dev_F1_score: 0.620806545793
+
+Train_loss: 2.18721222878
+Dev_loss: 2.23925375938
+Dev_Exact_match: 0.43
+Dev_F1_score: 0.581579397211
+
+Train_loss: 2.26434254646
+Dev_loss: 2.18721222878
+Dev_Exact_match: 0.45
+Dev_F1_score: 0.599577030812
+
+Train_loss: 2.61967945099
+Dev_loss: 2.26434254646
+Dev_Exact_match: 0.49
+Dev_F1_score: 0.587238095238
+
+Train_loss: 2.77447366714
+Dev_loss: 2.61967945099
+Dev_Exact_match: 0.41
+Dev_F1_score: 0.549975753778
+
+Train_loss: 2.64691329002
+Dev_loss: 2.77447366714
+Dev_Exact_match: 0.4
+Dev_F1_score: 0.571913419913
+
+Train_loss: 2.53308725357
+Dev_loss: 2.64691329002
+Dev_Exact_match: 0.38
+Dev_F1_score: 0.527439827287
+
+Train_loss: 2.30626702309
+Dev_loss: 2.53308725357
+Dev_Exact_match: 0.5
+Dev_F1_score: 0.602679004003
+
+Train_loss: 2.68685460091
+Dev_loss: 2.30626702309
+Dev_Exact_match: 0.39
+Dev_F1_score: 0.519651048298
+
+Train_loss: 2.27010822296
+Dev_loss: 2.68685460091
+Dev_Exact_match: 0.35
+Dev_F1_score: 0.481551353875
+
+Train_loss: 2.3448946476
+Dev_loss: 2.27010822296
+Dev_Exact_match: 0.59
+Dev_F1_score: 0.698232128982
+
+Train_loss: 2.32956027985
+Dev_loss: 2.3448946476
+Dev_Exact_match: 0.46
+Dev_F1_score: 0.620564981802
+
+Train_loss: 2.30286192894
+Dev_loss: 2.32956027985
+Dev_Exact_match: 0.43
+Dev_F1_score: 0.585841602842
+
+Train_loss: 2.54026460648
+Dev_loss: 2.30286192894
+Dev_Exact_match: 0.43
+Dev_F1_score: 0.599049450549
+
+Train_loss: 2.64951777458
+Dev_loss: 2.54026460648
+Dev_Exact_match: 0.44
+Dev_F1_score: 0.572093567251
+
+Train_loss: 2.89007282257
+Dev_loss: 2.64951777458
+Dev_Exact_match: 0.38
+Dev_F1_score: 0.500495693196
+
+Train_loss: 2.34231114388
+Dev_loss: 2.89007282257
+Dev_Exact_match: 0.43
+Dev_F1_score: 0.591155409405
+
+Train_loss: 2.46063756943
+Dev_loss: 2.34231114388
+Dev_Exact_match: 0.46
+Dev_F1_score: 0.585188672439
+
+Train_loss: 2.424472332
+Dev_loss: 2.46063756943
+Dev_Exact_match: 0.42
+Dev_F1_score: 0.518142857143
+
+Train_loss: 2.38150191307
+Dev_loss: 2.424472332
+Dev_Exact_match: 0.44
+Dev_F1_score: 0.615840533649
+
+Train_loss: 2.47382616997
+Dev_loss: 2.38150191307
+Dev_Exact_match: 0.47
+Dev_F1_score: 0.611763236763
+=============Epoch: 8
+
+Train_loss: 2.25102591515
+Dev_loss: 2.47382616997
+Dev_Exact_match: 0.53
+Dev_F1_score: 0.637323482073
+
+Train_loss: 2.42955088615
+Dev_loss: 2.25102591515
+Dev_Exact_match: 0.5
+Dev_F1_score: 0.610123737374
+
+Train_loss: 2.47291088104
+Dev_loss: 2.42955088615
+Dev_Exact_match: 0.51
+Dev_F1_score: 0.617904761905
+
+Train_loss: 2.44760322571
+Dev_loss: 2.47291088104
+Dev_Exact_match: 0.44
+Dev_F1_score: 0.576034243534
+
+Train_loss: 2.43089342117
+Dev_loss: 2.44760322571
+Dev_Exact_match: 0.41
+Dev_F1_score: 0.531164557665
+
+Train_loss: 1.80951404572
+Dev_loss: 2.43089342117
+Dev_Exact_match: 0.53
+Dev_F1_score: 0.662638717626
+
+Train_loss: 2.20733141899
+Dev_loss: 1.80951404572
+Dev_Exact_match: 0.46
+Dev_F1_score: 0.572083139083
+
+Train_loss: 2.02498030663
+Dev_loss: 2.20733141899
+Dev_Exact_match: 0.5
+Dev_F1_score: 0.630756354756
+
+Train_loss: 2.0720179081
+Dev_loss: 2.02498030663
+Dev_Exact_match: 0.48
+Dev_F1_score: 0.650991172226
+
+Train_loss: 2.49893856049
+Dev_loss: 2.0720179081
+Dev_Exact_match: 0.44
+Dev_F1_score: 0.5784526356
+
+Train_loss: 2.62735486031
+Dev_loss: 2.49893856049
+Dev_Exact_match: 0.51
+Dev_F1_score: 0.606082473082
+
+Train_loss: 2.22305607796
+Dev_loss: 2.62735486031
+Dev_Exact_match: 0.51
+Dev_F1_score: 0.619816271963
+
+Train_loss: 2.63309264183
+Dev_loss: 2.22305607796
+Dev_Exact_match: 0.47
+Dev_F1_score: 0.628268620269
+
+Train_loss: 2.22067546844
+Dev_loss: 2.63309264183
+Dev_Exact_match: 0.41
+Dev_F1_score: 0.561436529157
+
+Train_loss: 2.424066782
+Dev_loss: 2.22067546844
+Dev_Exact_match: 0.37
+Dev_F1_score: 0.506888888889
+
+Train_loss: 2.64883470535
+Dev_loss: 2.424066782
+Dev_Exact_match: 0.38
+Dev_F1_score: 0.548800160624
+
+Train_loss: 2.36447668076
+Dev_loss: 2.64883470535
+Dev_Exact_match: 0.5
+Dev_F1_score: 0.610293956044
+
+Train_loss: 2.33151912689
+Dev_loss: 2.36447668076
+Dev_Exact_match: 0.43
+Dev_F1_score: 0.546215312465
+
+Train_loss: 2.48360157013
+Dev_loss: 2.33151912689
+Dev_Exact_match: 0.4
+Dev_F1_score: 0.527351037851
+
+Train_loss: 2.15913915634
+Dev_loss: 2.48360157013
+Dev_Exact_match: 0.41
+Dev_F1_score: 0.576308691309
+
+Train_loss: 2.47215056419
+Dev_loss: 2.15913915634
+Dev_Exact_match: 0.44
+Dev_F1_score: 0.558523393273
+=============Epoch: 9
+
+Train_loss: 2.32661938667
+Dev_loss: 2.47215056419
+Dev_Exact_match: 0.47
+Dev_F1_score: 0.61366017316
+
+Train_loss: 2.34774589539
+Dev_loss: 2.32661938667
+Dev_Exact_match: 0.47
+Dev_F1_score: 0.575428359222
+
+Train_loss: 2.78717565536
+Dev_loss: 2.34774589539
+Dev_Exact_match: 0.42
+Dev_F1_score: 0.535304370466
+
+Train_loss: 2.39023375511
+Dev_loss: 2.78717565536
+Dev_Exact_match: 0.46
+Dev_F1_score: 0.548904761905
+
+Train_loss: 2.44054722786
+Dev_loss: 2.39023375511
+Dev_Exact_match: 0.49
+Dev_F1_score: 0.621410940367
+
+Train_loss: 2.41748809814
+Dev_loss: 2.44054722786
+Dev_Exact_match: 0.51
+Dev_F1_score: 0.691867480473
+
+Train_loss: 2.24645471573
+Dev_loss: 2.41748809814
+Dev_Exact_match: 0.42
+Dev_F1_score: 0.584658048092
+
+Train_loss: 2.19384622574
+Dev_loss: 2.24645471573
+Dev_Exact_match: 0.43
+Dev_F1_score: 0.543415689866
+
+Train_loss: 2.57367730141
+Dev_loss: 2.19384622574
+Dev_Exact_match: 0.47
+Dev_F1_score: 0.565874153195
+
+Train_loss: 2.72339987755
+Dev_loss: 2.57367730141
+Dev_Exact_match: 0.51
+Dev_F1_score: 0.612475098001
+
+Train_loss: 2.31742525101
+Dev_loss: 2.72339987755
+Dev_Exact_match: 0.45
+Dev_F1_score: 0.628880089896
+
+Train_loss: 2.75241422653
+Dev_loss: 2.31742525101
+Dev_Exact_match: 0.37
+Dev_F1_score: 0.487761904762
+
+Train_loss: 2.45385670662
+Dev_loss: 2.75241422653
+Dev_Exact_match: 0.4
+Dev_F1_score: 0.544455488955
+
+Train_loss: 2.56009531021
+Dev_loss: 2.45385670662
+Dev_Exact_match: 0.46
+Dev_F1_score: 0.596773448773
+
+Train_loss: 2.76800942421
+Dev_loss: 2.56009531021
+Dev_Exact_match: 0.43
+Dev_F1_score: 0.552414363414
+
+Train_loss: 2.30379271507
+Dev_loss: 2.76800942421
+Dev_Exact_match: 0.49
+Dev_F1_score: 0.624193528694
+
+Train_loss: 2.43444561958
+Dev_loss: 2.30379271507
+Dev_Exact_match: 0.45
+Dev_F1_score: 0.601752664003
+
+Train_loss: 2.55328392982
+Dev_loss: 2.43444561958
+Dev_Exact_match: 0.42
+Dev_F1_score: 0.560925679584
+
+Train_loss: 2.04567360878
+Dev_loss: 2.55328392982
+Dev_Exact_match: 0.46
+Dev_F1_score: 0.601321679954
+
+Train_loss: 2.13192558289
+Dev_loss: 2.04567360878
+Dev_Exact_match: 0.48
+Dev_F1_score: 0.649468635939
+
+Train_loss: 2.45488977432
+Dev_loss: 2.13192558289
+Dev_Exact_match: 0.52
+Dev_F1_score: 0.641128446115
+=============Epoch: 10
+
+Train_loss: 2.68291831017
+Dev_loss: 2.45488977432
+Dev_Exact_match: 0.44
+Dev_F1_score: 0.568448717949
+
+Train_loss: 2.56462240219
+Dev_loss: 2.68291831017
+Dev_Exact_match: 0.52
+Dev_F1_score: 0.590523809524
+
+Train_loss: 2.72757530212
+Dev_loss: 2.56462240219
+Dev_Exact_match: 0.37
+Dev_F1_score: 0.515857142857
+
+Train_loss: 2.45468401909
+Dev_loss: 2.72757530212
+Dev_Exact_match: 0.44
+Dev_F1_score: 0.596078190328
+
+Train_loss: 2.92590451241
+Dev_loss: 2.45468401909
+Dev_Exact_match: 0.4
+Dev_F1_score: 0.532592796093
+
+Train_loss: 2.50449633598
+Dev_loss: 2.92590451241
+Dev_Exact_match: 0.51
+Dev_F1_score: 0.623586857587
+
+Train_loss: 2.27367663383
+Dev_loss: 2.50449633598
+Dev_Exact_match: 0.48
+Dev_F1_score: 0.588789238276
+
+Train_loss: 2.32625675201
+Dev_loss: 2.27367663383
+Dev_Exact_match: 0.54
+Dev_F1_score: 0.682813485373
+
+Train_loss: 2.72678995132
+Dev_loss: 2.32625675201
+Dev_Exact_match: 0.42
+Dev_F1_score: 0.51816006216
+
+Train_loss: 2.36724805832
+Dev_loss: 2.72678995132
+Dev_Exact_match: 0.46
+Dev_F1_score: 0.61234562273
+
+Train_loss: 2.11327266693
+Dev_loss: 2.36724805832
+Dev_Exact_match: 0.45
+Dev_F1_score: 0.61210961261
+
+Train_loss: 2.41601967812
+Dev_loss: 2.11327266693
+Dev_Exact_match: 0.45
+Dev_F1_score: 0.581838161838
+
+Train_loss: 2.41350674629
+Dev_loss: 2.41601967812
+Dev_Exact_match: 0.46
+Dev_F1_score: 0.642581196581
+
+Train_loss: 2.35469532013
+Dev_loss: 2.41350674629
+Dev_Exact_match: 0.45
+Dev_F1_score: 0.590747704148
+
+Train_loss: 2.71549010277
+Dev_loss: 2.35469532013
+Dev_Exact_match: 0.39
+Dev_F1_score: 0.545890720391
+
+Train_loss: 2.80074357986
+Dev_loss: 2.71549010277
+Dev_Exact_match: 0.42
+Dev_F1_score: 0.553434639367
+
+Train_loss: 2.17081069946
+Dev_loss: 2.80074357986
+Dev_Exact_match: 0.4
+Dev_F1_score: 0.590148475707
+
+Train_loss: 2.59311413765
+Dev_loss: 2.17081069946
+Dev_Exact_match: 0.45
+Dev_F1_score: 0.583211779449
+
+Train_loss: 2.64707684517
+Dev_loss: 2.59311413765
+Dev_Exact_match: 0.46
+Dev_F1_score: 0.600962906375
+
+Train_loss: 2.45038771629
+Dev_loss: 2.64707684517
+Dev_Exact_match: 0.49
+Dev_F1_score: 0.611774531025
+
+Train_loss: 2.69269752502
+Dev_loss: 2.45038771629
+Dev_Exact_match: 0.36
+Dev_F1_score: 0.477075570834
+=============Epoch: 11
+
+Train_loss: 2.67829751968
+Dev_loss: 2.69269752502
+Dev_Exact_match: 0.43
+Dev_F1_score: 0.576397269397
+
+Train_loss: 2.76384496689
+Dev_loss: 2.67829751968
+Dev_Exact_match: 0.42
+Dev_F1_score: 0.556777489177
+
+Train_loss: 3.08155918121
+Dev_loss: 2.76384496689
+Dev_Exact_match: 0.35
+Dev_F1_score: 0.467545621046
+
+Train_loss: 2.90085291862
+Dev_loss: 3.08155918121
+Dev_Exact_match: 0.45
+Dev_F1_score: 0.594376386685
+
+Train_loss: 2.32965707779
+Dev_loss: 2.90085291862
+Dev_Exact_match: 0.43
+Dev_F1_score: 0.573303030303
+
+Train_loss: 2.60462760925
+Dev_loss: 2.32965707779
+Dev_Exact_match: 0.46
+Dev_F1_score: 0.587943223443
+
+Train_loss: 2.23727846146
+Dev_loss: 2.60462760925
+Dev_Exact_match: 0.46
+Dev_F1_score: 0.613559785244
+
+Train_loss: 2.59077334404
+Dev_loss: 2.23727846146
+Dev_Exact_match: 0.51
+Dev_F1_score: 0.633088706615
+
+Train_loss: 2.77717971802
+Dev_loss: 2.59077334404
+Dev_Exact_match: 0.39
+Dev_F1_score: 0.530953700668
+
+Train_loss: 2.6542468071
+Dev_loss: 2.77717971802
+Dev_Exact_match: 0.39
+Dev_F1_score: 0.530543130073
+
+Train_loss: 2.40968418121
+Dev_loss: 2.6542468071
+Dev_Exact_match: 0.46
+Dev_F1_score: 0.570414141414
+
+Train_loss: 2.68621492386
+Dev_loss: 2.40968418121
+Dev_Exact_match: 0.45
+Dev_F1_score: 0.546437562438
+
+Train_loss: 2.38967728615
+Dev_loss: 2.68621492386
+Dev_Exact_match: 0.52
+Dev_F1_score: 0.624419413919
+
+Train_loss: 2.56077170372
+Dev_loss: 2.38967728615
+Dev_Exact_match: 0.43
+Dev_F1_score: 0.557503267974
+
+Train_loss: 2.44688367844
+Dev_loss: 2.56077170372
+Dev_Exact_match: 0.44
+Dev_F1_score: 0.559453712954
+
+Train_loss: 2.13033080101
+Dev_loss: 2.44688367844
+Dev_Exact_match: 0.44
+Dev_F1_score: 0.601670168067
+
+Train_loss: 2.46359705925
+Dev_loss: 2.13033080101
+Dev_Exact_match: 0.47
+Dev_F1_score: 0.620951548452
+
+Train_loss: 2.47534394264
+Dev_loss: 2.46359705925
+Dev_Exact_match: 0.48
+Dev_F1_score: 0.59531024531
+
+Train_loss: 2.42240333557
+Dev_loss: 2.47534394264
+Dev_Exact_match: 0.48
+Dev_F1_score: 0.585536388448
+
+Train_loss: 2.32622313499
+Dev_loss: 2.42240333557
+Dev_Exact_match: 0.39
+Dev_F1_score: 0.519471139971
+
+Train_loss: 2.69634628296
+Dev_loss: 2.32622313499
+Dev_Exact_match: 0.42
+Dev_F1_score: 0.527861471861
+=============Epoch: 12
+
+Train_loss: 2.52231431007
+Dev_loss: 2.69634628296
+Dev_Exact_match: 0.51
+Dev_F1_score: 0.651833333333
+
+Train_loss: 2.83888816833
+Dev_loss: 2.52231431007
+Dev_Exact_match: 0.4
+Dev_F1_score: 0.497024531025
+
+Train_loss: 2.60276007652
+Dev_loss: 2.83888816833
+Dev_Exact_match: 0.47
+Dev_F1_score: 0.576336247086
+
+Train_loss: 2.62378931046
+Dev_loss: 2.60276007652
+Dev_Exact_match: 0.4
+Dev_F1_score: 0.57657042957
+
+Train_loss: 2.47043180466
+Dev_loss: 2.62378931046
+Dev_Exact_match: 0.39
+Dev_F1_score: 0.54701914099
+
+Train_loss: 2.3001806736
+Dev_loss: 2.47043180466
+Dev_Exact_match: 0.48
+Dev_F1_score: 0.627732212232
+
+Train_loss: 2.4839990139
+Dev_loss: 2.3001806736
+Dev_Exact_match: 0.47
+Dev_F1_score: 0.644042568543
+
+Train_loss: 2.52811765671
+Dev_loss: 2.4839990139
+Dev_Exact_match: 0.5
+Dev_F1_score: 0.601792429792
+
+Train_loss: 2.79213213921
+Dev_loss: 2.52811765671
+Dev_Exact_match: 0.43
+Dev_F1_score: 0.599404863395
+
+Train_loss: 2.22726869583
+Dev_loss: 2.79213213921
+Dev_Exact_match: 0.46
+Dev_F1_score: 0.574599206349
+
+Train_loss: 2.47729444504
+Dev_loss: 2.22726869583
+Dev_Exact_match: 0.42
+Dev_F1_score: 0.551377232266
+
+Train_loss: 2.4698369503
+Dev_loss: 2.47729444504
+Dev_Exact_match: 0.42
+Dev_F1_score: 0.565419813903
+
+Train_loss: 2.28309059143
+Dev_loss: 2.4698369503
+Dev_Exact_match: 0.45
+Dev_F1_score: 0.579663919414
+
+Train_loss: 2.37114071846
+Dev_loss: 2.28309059143
+Dev_Exact_match: 0.46
+Dev_F1_score: 0.558411477411
+
+Train_loss: 2.61787891388
+Dev_loss: 2.37114071846
+Dev_Exact_match: 0.41
+Dev_F1_score: 0.568950872657
+
+Train_loss: 2.51782083511
+Dev_loss: 2.61787891388
+Dev_Exact_match: 0.4
+Dev_F1_score: 0.574913224031
+
+Train_loss: 2.7745988369
+Dev_loss: 2.51782083511
+Dev_Exact_match: 0.43
+Dev_F1_score: 0.587494461094
+
+Train_loss: 2.04770183563
+Dev_loss: 2.7745988369
+Dev_Exact_match: 0.47
+Dev_F1_score: 0.597160894661
+
+Train_loss: 2.29875826836
+Dev_loss: 2.04770183563
+Dev_Exact_match: 0.47
+Dev_F1_score: 0.58788045288
+
+Train_loss: 2.65804123878
+Dev_loss: 2.29875826836
+Dev_Exact_match: 0.44
+Dev_F1_score: 0.582112443112
+
+Train_loss: 2.08859705925
+Dev_loss: 2.65804123878
+Dev_Exact_match: 0.44
+Dev_F1_score: 0.615459685242
+=============Epoch: 13
+
+Train_loss: 2.65585565567
+Dev_loss: 2.08859705925
+Dev_Exact_match: 0.52
+Dev_F1_score: 0.602291643139
+
+Train_loss: 2.3187456131
+Dev_loss: 2.65585565567
+Dev_Exact_match: 0.45
+Dev_F1_score: 0.543674603175
+
+Train_loss: 2.07383871078
+Dev_loss: 2.3187456131
+Dev_Exact_match: 0.54
+Dev_F1_score: 0.682667157404
+
+Train_loss: 2.30503511429
+Dev_loss: 2.07383871078
+Dev_Exact_match: 0.46
+Dev_F1_score: 0.589596514597
+
+Train_loss: 2.16627049446
+Dev_loss: 2.30503511429
+Dev_Exact_match: 0.49
+Dev_F1_score: 0.643232323232
+
+Train_loss: 2.14849925041
+Dev_loss: 2.16627049446
+Dev_Exact_match: 0.48
+Dev_F1_score: 0.62841295306
+
+Train_loss: 2.4362590313
+Dev_loss: 2.14849925041
+Dev_Exact_match: 0.43
+Dev_F1_score: 0.550233755065
+
+Train_loss: 2.19735980034
+Dev_loss: 2.4362590313
+Dev_Exact_match: 0.46
+Dev_F1_score: 0.616476301476
+
+Train_loss: 2.26710748672
+Dev_loss: 2.19735980034
+Dev_Exact_match: 0.54
+Dev_F1_score: 0.66147979798
+
+Train_loss: 2.43991684914
+Dev_loss: 2.26710748672
+Dev_Exact_match: 0.45
+Dev_F1_score: 0.606401154401
+
+Train_loss: 2.38341856003
+Dev_loss: 2.43991684914
+Dev_Exact_match: 0.45
+Dev_F1_score: 0.594973584585
+
+Train_loss: 2.34939646721
+Dev_loss: 2.38341856003
+Dev_Exact_match: 0.49
+Dev_F1_score: 0.637371062271
+
+Train_loss: 2.52262878418
+Dev_loss: 2.34939646721
+Dev_Exact_match: 0.46
+Dev_F1_score: 0.562428571429
+
+Train_loss: 2.40800070763
+Dev_loss: 2.52262878418
+Dev_Exact_match: 0.49
+Dev_F1_score: 0.585863233172
+
+Train_loss: 1.91584420204
+Dev_loss: 2.40800070763
+Dev_Exact_match: 0.5
+Dev_F1_score: 0.628574823869
+
+Train_loss: 2.3769698143
+Dev_loss: 1.91584420204
+Dev_Exact_match: 0.45
+Dev_F1_score: 0.575128384687
+
+Train_loss: 2.77047681808
+Dev_loss: 2.3769698143
+Dev_Exact_match: 0.38
+Dev_F1_score: 0.507899754729
+
+Train_loss: 2.29099321365
+Dev_loss: 2.77047681808
+Dev_Exact_match: 0.44
+Dev_F1_score: 0.61254978355
+
+Train_loss: 2.6064388752
+Dev_loss: 2.29099321365
+Dev_Exact_match: 0.38
+Dev_F1_score: 0.519546657047
+
+Train_loss: 2.34974503517
+Dev_loss: 2.6064388752
+Dev_Exact_match: 0.44
+Dev_F1_score: 0.612213943951
+
+Train_loss: 2.39414334297
+Dev_loss: 2.34974503517
+Dev_Exact_match: 0.44
+Dev_F1_score: 0.580259677105
+=============Epoch: 14
+
+Train_loss: 2.16153979301
+Dev_loss: 2.39414334297
+Dev_Exact_match: 0.51
+Dev_F1_score: 0.656007936508
+
+Train_loss: 2.30513691902
+Dev_loss: 2.16153979301
+Dev_Exact_match: 0.51
+Dev_F1_score: 0.663238028638
+
+Train_loss: 2.47239732742
+Dev_loss: 2.30513691902
+Dev_Exact_match: 0.43
+Dev_F1_score: 0.566007691655
+
+Train_loss: 2.41556239128
+Dev_loss: 2.47239732742
+Dev_Exact_match: 0.4
+Dev_F1_score: 0.558439164284
+
+Train_loss: 2.30126261711
+Dev_loss: 2.41556239128
+Dev_Exact_match: 0.46
+Dev_F1_score: 0.583148296148
+
+Train_loss: 2.35204482079
+Dev_loss: 2.30126261711
+Dev_Exact_match: 0.51
+Dev_F1_score: 0.610142484107
+
+Train_loss: 2.17831468582
+Dev_loss: 2.35204482079
+Dev_Exact_match: 0.52
+Dev_F1_score: 0.636637473637
+
+Train_loss: 2.45290589333
+Dev_loss: 2.17831468582
+Dev_Exact_match: 0.46
+Dev_F1_score: 0.591219320326
+
+Train_loss: 2.69258403778
+Dev_loss: 2.45290589333
+Dev_Exact_match: 0.39
+Dev_F1_score: 0.545696248196
+
+Train_loss: 2.76786613464
+Dev_loss: 2.69258403778
+Dev_Exact_match: 0.37
+Dev_F1_score: 0.561295400076
+
+Train_loss: 2.14221835136
+Dev_loss: 2.76786613464
+Dev_Exact_match: 0.53
+Dev_F1_score: 0.660097929848
+
+Train_loss: 2.34210824966
+Dev_loss: 2.14221835136
+Dev_Exact_match: 0.42
+Dev_F1_score: 0.579845151202
+
+Train_loss: 2.41666698456
+Dev_loss: 2.34210824966
+Dev_Exact_match: 0.41
+Dev_F1_score: 0.57250510927
+
+Train_loss: 2.45786333084
+Dev_loss: 2.41666698456
+Dev_Exact_match: 0.43
+Dev_F1_score: 0.585678184389
+
+Train_loss: 2.54602146149
+Dev_loss: 2.45786333084
+Dev_Exact_match: 0.53
+Dev_F1_score: 0.621079099263
+
+Train_loss: 2.24092268944
+Dev_loss: 2.54602146149
+Dev_Exact_match: 0.48
+Dev_F1_score: 0.627635172018
+
+Train_loss: 2.43811774254
+Dev_loss: 2.24092268944
+Dev_Exact_match: 0.47
+Dev_F1_score: 0.599030685001
+
+Train_loss: 2.87368988991
+Dev_loss: 2.43811774254
+Dev_Exact_match: 0.47
+Dev_F1_score: 0.605025822131
+
+Train_loss: 2.53056383133
+Dev_loss: 2.87368988991
+Dev_Exact_match: 0.44
+Dev_F1_score: 0.579088666236
+
+Train_loss: 2.43408823013
+Dev_loss: 2.53056383133
+Dev_Exact_match: 0.43
+Dev_F1_score: 0.572782661783
+
+Train_loss: 2.46729922295
+Dev_loss: 2.43408823013
+Dev_Exact_match: 0.55
+Dev_F1_score: 0.656244246981
+=============Epoch: 15
+
+Train_loss: 2.24124526978
+Dev_loss: 2.46729922295
+Dev_Exact_match: 0.48
+Dev_F1_score: 0.622959235209
+
+Train_loss: 2.82268404961
+Dev_loss: 2.24124526978
+Dev_Exact_match: 0.39
+Dev_F1_score: 0.569536918605
+
+Train_loss: 2.23628902435
+Dev_loss: 2.82268404961
+Dev_Exact_match: 0.45
+Dev_F1_score: 0.590597680098
+
+Train_loss: 2.36114215851
+Dev_loss: 2.23628902435
+Dev_Exact_match: 0.48
+Dev_F1_score: 0.614514023558
+
+Train_loss: 2.58756422997
+Dev_loss: 2.36114215851
+Dev_Exact_match: 0.35
+Dev_F1_score: 0.510385628097
+
+Train_loss: 2.88645792007
+Dev_loss: 2.58756422997
+Dev_Exact_match: 0.38
+Dev_F1_score: 0.538557775558
+
+Train_loss: 2.62428021431
+Dev_loss: 2.88645792007
+Dev_Exact_match: 0.39
+Dev_F1_score: 0.523421800422
+
+Train_loss: 2.40390181541
+Dev_loss: 2.62428021431
+Dev_Exact_match: 0.43
+Dev_F1_score: 0.624370939206
+
+Train_loss: 2.89773464203
+Dev_loss: 2.40390181541
+Dev_Exact_match: 0.3
+Dev_F1_score: 0.449375389231
+
+Train_loss: 2.52753543854
+Dev_loss: 2.89773464203
+Dev_Exact_match: 0.4
+Dev_F1_score: 0.519297202797
+
+Train_loss: 2.58887553215
+Dev_loss: 2.52753543854
+Dev_Exact_match: 0.52
+Dev_F1_score: 0.629747086247
+
+Train_loss: 2.50346302986
+Dev_loss: 2.58887553215
+Dev_Exact_match: 0.46
+Dev_F1_score: 0.569978354978
+
+Train_loss: 2.48075604439
+Dev_loss: 2.50346302986
+Dev_Exact_match: 0.46
+Dev_F1_score: 0.58095611578
+
+Train_loss: 2.47494029999
+Dev_loss: 2.48075604439
+Dev_Exact_match: 0.54
+Dev_F1_score: 0.650841269841
+
+Train_loss: 2.20429897308
+Dev_loss: 2.47494029999
+Dev_Exact_match: 0.47
+Dev_F1_score: 0.591219070403
+
+Train_loss: 2.30788135529
+Dev_loss: 2.20429897308
+Dev_Exact_match: 0.54
+Dev_F1_score: 0.66801986249
+
+Train_loss: 2.82280397415
+Dev_loss: 2.30788135529
+Dev_Exact_match: 0.42
+Dev_F1_score: 0.582370740371
+
+Train_loss: 2.43871760368
+Dev_loss: 2.82280397415
+Dev_Exact_match: 0.45
+Dev_F1_score: 0.584831113331
+
+Train_loss: 2.05445384979
+Dev_loss: 2.43871760368
+Dev_Exact_match: 0.57
+Dev_F1_score: 0.675393106893
+
+Train_loss: 2.03234386444
+Dev_loss: 2.05445384979
+Dev_Exact_match: 0.52
+Dev_F1_score: 0.61280952381
+
+Train_loss: 2.19896054268
+Dev_loss: 2.03234386444
+Dev_Exact_match: 0.52
+Dev_F1_score: 0.708451104451
+=============Epoch: 16
+
+Train_loss: 2.71524858475
+Dev_loss: 2.19896054268
+Dev_Exact_match: 0.36
+Dev_F1_score: 0.502599090565
+
+Train_loss: 2.46113920212
+Dev_loss: 2.71524858475
+Dev_Exact_match: 0.47
+Dev_F1_score: 0.560276748156
+
+Train_loss: 2.43623995781
+Dev_loss: 2.46113920212
+Dev_Exact_match: 0.48
+Dev_F1_score: 0.587056341835
+
+Train_loss: 2.42093157768
+Dev_loss: 2.43623995781
+Dev_Exact_match: 0.45
+Dev_F1_score: 0.597305689432
+
+Train_loss: 2.27947187424
+Dev_loss: 2.42093157768
+Dev_Exact_match: 0.48
+Dev_F1_score: 0.609241425241
+
+Train_loss: 2.61652636528
+Dev_loss: 2.27947187424
+Dev_Exact_match: 0.5
+Dev_F1_score: 0.585486291486
+
+Train_loss: 2.53889656067
+Dev_loss: 2.61652636528
+Dev_Exact_match: 0.48
+Dev_F1_score: 0.586504412254
+
+Train_loss: 2.40194034576
+Dev_loss: 2.53889656067
+Dev_Exact_match: 0.41
+Dev_F1_score: 0.562646103896
+
+Train_loss: 2.23918223381
+Dev_loss: 2.40194034576
+Dev_Exact_match: 0.41
+Dev_F1_score: 0.595792833328
+
+Train_loss: 2.36177659035
+Dev_loss: 2.23918223381
+Dev_Exact_match: 0.47
+Dev_F1_score: 0.601176517927
+
+Train_loss: 2.53273153305
+Dev_loss: 2.36177659035
+Dev_Exact_match: 0.45
+Dev_F1_score: 0.590962407324
+
+Train_loss: 2.58385896683
+Dev_loss: 2.53273153305
+Dev_Exact_match: 0.42
+Dev_F1_score: 0.530304489628
+
+Train_loss: 2.43800377846
+Dev_loss: 2.58385896683
+Dev_Exact_match: 0.43
+Dev_F1_score: 0.563905480141
+
+Train_loss: 2.30006551743
+Dev_loss: 2.43800377846
+Dev_Exact_match: 0.41
+Dev_F1_score: 0.580199895907
+
+Train_loss: 2.46931123734
+Dev_loss: 2.30006551743
+Dev_Exact_match: 0.44
+Dev_F1_score: 0.581267687868
+
+Train_loss: 2.50576925278
+Dev_loss: 2.46931123734
+Dev_Exact_match: 0.39
+Dev_F1_score: 0.512763958264
+
+Train_loss: 2.29057002068
+Dev_loss: 2.50576925278
+Dev_Exact_match: 0.45
+Dev_F1_score: 0.572937118437
+
+Train_loss: 2.49685072899
+Dev_loss: 2.29057002068
+Dev_Exact_match: 0.44
+Dev_F1_score: 0.579515512266
+
+Train_loss: 2.32864165306
+Dev_loss: 2.49685072899
+Dev_Exact_match: 0.4
+Dev_F1_score: 0.556492063492
+
+Train_loss: 2.50276017189
+Dev_loss: 2.32864165306
+Dev_Exact_match: 0.48
+Dev_F1_score: 0.615164927257
+
+Train_loss: 2.75124549866
+Dev_loss: 2.50276017189
+Dev_Exact_match: 0.44
+Dev_F1_score: 0.618923520924
+=============Epoch: 17
+
+Train_loss: 2.1775867939
+Dev_loss: 2.75124549866
+Dev_Exact_match: 0.47
+Dev_F1_score: 0.586785714286
+
+Train_loss: 2.65832138062
+Dev_loss: 2.1775867939
+Dev_Exact_match: 0.52
+Dev_F1_score: 0.634884643135
+
+Train_loss: 2.61972212791
+Dev_loss: 2.65832138062
+Dev_Exact_match: 0.36
+Dev_F1_score: 0.515738185791
+
+Train_loss: 2.26707005501
+Dev_loss: 2.61972212791
+Dev_Exact_match: 0.44
+Dev_F1_score: 0.587525974026
+
+Train_loss: 2.05904102325
+Dev_loss: 2.26707005501
+Dev_Exact_match: 0.47
+Dev_F1_score: 0.631637543949
+
+Train_loss: 3.41869473457
+Dev_loss: 2.05904102325
+Dev_Exact_match: 0.3
+Dev_F1_score: 0.488439763302
+
+Train_loss: 2.51049160957
+Dev_loss: 3.41869473457
+Dev_Exact_match: 0.49
+Dev_F1_score: 0.584052372464
+
+Train_loss: 2.44552230835
+Dev_loss: 2.51049160957
+Dev_Exact_match: 0.55
+Dev_F1_score: 0.689460539461
+
+Train_loss: 2.22852897644
+Dev_loss: 2.44552230835
+Dev_Exact_match: 0.41
+Dev_F1_score: 0.552378954379
+
+Train_loss: 2.51371526718
+Dev_loss: 2.22852897644
+Dev_Exact_match: 0.49
+Dev_F1_score: 0.630844790504
+
+Train_loss: 2.6416592598
+Dev_loss: 2.51371526718
+Dev_Exact_match: 0.5
+Dev_F1_score: 0.634527417027
+
+Train_loss: 2.44497513771
+Dev_loss: 2.6416592598
+Dev_Exact_match: 0.44
+Dev_F1_score: 0.603827823736
+
+Train_loss: 2.30803084373
+Dev_loss: 2.44497513771
+Dev_Exact_match: 0.51
+Dev_F1_score: 0.644332473082
+
+Train_loss: 2.7244181633
+Dev_loss: 2.30803084373
+Dev_Exact_match: 0.4
+Dev_F1_score: 0.524548717949
+
+Train_loss: 2.69784402847
+Dev_loss: 2.7244181633
+Dev_Exact_match: 0.34
+Dev_F1_score: 0.523452324246
+
+Train_loss: 2.6813325882
+Dev_loss: 2.69784402847
+Dev_Exact_match: 0.42
+Dev_F1_score: 0.591579004329
+
+Train_loss: 2.7716524601
+Dev_loss: 2.6813325882
+Dev_Exact_match: 0.51
+Dev_F1_score: 0.605357560568
+
+Train_loss: 2.6417350769
+Dev_loss: 2.7716524601
+Dev_Exact_match: 0.38
+Dev_F1_score: 0.58153968254
+
+Train_loss: 2.73513793945
+Dev_loss: 2.6417350769
+Dev_Exact_match: 0.4
+Dev_F1_score: 0.52523962149
+
+Train_loss: 2.17589497566
+Dev_loss: 2.73513793945
+Dev_Exact_match: 0.47
+Dev_F1_score: 0.62841042291
+
+Train_loss: 2.55698800087
+Dev_loss: 2.17589497566
+Dev_Exact_match: 0.42
+Dev_F1_score: 0.575016976488
+=============Epoch: 18
+
+Train_loss: 2.36198234558
+Dev_loss: 2.55698800087
+Dev_Exact_match: 0.49
+Dev_F1_score: 0.609102699932
+
+Train_loss: 2.48207807541
+Dev_loss: 2.36198234558
+Dev_Exact_match: 0.49
+Dev_F1_score: 0.612819966583
+
+Train_loss: 2.51854801178
+Dev_loss: 2.48207807541
+Dev_Exact_match: 0.42
+Dev_F1_score: 0.583079365079
+
+Train_loss: 2.29878044128
+Dev_loss: 2.51854801178
+Dev_Exact_match: 0.46
+Dev_F1_score: 0.583284500845
+
+Train_loss: 2.6160993576
+Dev_loss: 2.29878044128
+Dev_Exact_match: 0.4
+Dev_F1_score: 0.593465578326
+
+Train_loss: 2.38220620155
+Dev_loss: 2.6160993576
+Dev_Exact_match: 0.5
+Dev_F1_score: 0.63118768074
+
+Train_loss: 2.63509726524
+Dev_loss: 2.38220620155
+Dev_Exact_match: 0.5
+Dev_F1_score: 0.625795671219
+
+Train_loss: 2.2513320446
+Dev_loss: 2.63509726524
+Dev_Exact_match: 0.45
+Dev_F1_score: 0.593813686314
+
+Train_loss: 2.61308026314
+Dev_loss: 2.2513320446
+Dev_Exact_match: 0.42
+Dev_F1_score: 0.544110522518
+
+Train_loss: 2.48386454582
+Dev_loss: 2.61308026314
+Dev_Exact_match: 0.53
+Dev_F1_score: 0.626137806638
+
+Train_loss: 2.70192050934
+Dev_loss: 2.48386454582
+Dev_Exact_match: 0.42
+Dev_F1_score: 0.555916305916
+
+Train_loss: 2.59033370018
+Dev_loss: 2.70192050934
+Dev_Exact_match: 0.41
+Dev_F1_score: 0.553739495798
+
+Train_loss: 2.70957016945
+Dev_loss: 2.59033370018
+Dev_Exact_match: 0.38
+Dev_F1_score: 0.536986278569
+
+Train_loss: 2.46875905991
+Dev_loss: 2.70957016945
+Dev_Exact_match: 0.51
+Dev_F1_score: 0.657297504181
+
+Train_loss: 2.26964664459
+Dev_loss: 2.46875905991
+Dev_Exact_match: 0.39
+Dev_F1_score: 0.544759398496
+
+Train_loss: 2.74059033394
+Dev_loss: 2.26964664459
+Dev_Exact_match: 0.46
+Dev_F1_score: 0.634537264443
+
+Train_loss: 2.1760122776
+Dev_loss: 2.74059033394
+Dev_Exact_match: 0.45
+Dev_F1_score: 0.640310754605
+
+Train_loss: 2.36028766632
+Dev_loss: 2.1760122776
+Dev_Exact_match: 0.48
+Dev_F1_score: 0.584400599401
+
+Train_loss: 2.53693389893
+Dev_loss: 2.36028766632
+Dev_Exact_match: 0.47
+Dev_F1_score: 0.606942442505
+
+Train_loss: 2.53919267654
+Dev_loss: 2.53693389893
+Dev_Exact_match: 0.37
+Dev_F1_score: 0.523085099111
+
+Train_loss: 2.292293787
+Dev_loss: 2.53919267654
+Dev_Exact_match: 0.5
+Dev_F1_score: 0.629863580864
+=============Epoch: 19
+
+Train_loss: 2.40006422997
+Dev_loss: 2.292293787
+Dev_Exact_match: 0.39
+Dev_F1_score: 0.516531236382
+
+Train_loss: 2.17752122879
+Dev_loss: 2.40006422997
+Dev_Exact_match: 0.55
+Dev_F1_score: 0.703926554955
+
+Train_loss: 2.54571533203
+Dev_loss: 2.17752122879
+Dev_Exact_match: 0.36
+Dev_F1_score: 0.518602005837
+
+Train_loss: 2.57548689842
+Dev_loss: 2.54571533203
+Dev_Exact_match: 0.43
+Dev_F1_score: 0.53043956044
+
+Train_loss: 2.43868255615
+Dev_loss: 2.57548689842
+Dev_Exact_match: 0.37
+Dev_F1_score: 0.585191344603
+
+Train_loss: 2.56941437721
+Dev_loss: 2.43868255615
+Dev_Exact_match: 0.44
+Dev_F1_score: 0.620461593962
+
+Train_loss: 2.54050827026
+Dev_loss: 2.56941437721
+Dev_Exact_match: 0.44
+Dev_F1_score: 0.553650516151
+
+Train_loss: 2.70999455452
+Dev_loss: 2.54050827026
+Dev_Exact_match: 0.42
+Dev_F1_score: 0.586773983263
+
+Train_loss: 2.62464547157
+Dev_loss: 2.70999455452
+Dev_Exact_match: 0.43
+Dev_F1_score: 0.563549912076
+
+Train_loss: 2.3765604496
+Dev_loss: 2.62464547157
+Dev_Exact_match: 0.48
+Dev_F1_score: 0.597737543502
+
+Train_loss: 2.23166966438
+Dev_loss: 2.3765604496
+Dev_Exact_match: 0.49
+Dev_F1_score: 0.633811050061
+
+Train_loss: 2.36894011497
+Dev_loss: 2.23166966438
+Dev_Exact_match: 0.56
+Dev_F1_score: 0.636578431373
+
+Train_loss: 2.5124065876
+Dev_loss: 2.36894011497
+Dev_Exact_match: 0.45
+Dev_F1_score: 0.58213048063
+
+Train_loss: 2.36609244347
+Dev_loss: 2.5124065876
+Dev_Exact_match: 0.38
+Dev_F1_score: 0.57329258664
+
+Train_loss: 2.56803584099
+Dev_loss: 2.36609244347
+Dev_Exact_match: 0.4
+Dev_F1_score: 0.566416619328
+
+Train_loss: 2.76368522644
+Dev_loss: 2.56803584099
+Dev_Exact_match: 0.45
+Dev_F1_score: 0.546626123876
+
+Train_loss: 2.71438932419
+Dev_loss: 2.76368522644
+Dev_Exact_match: 0.39
+Dev_F1_score: 0.547647130647
+
+Train_loss: 2.60630917549
+Dev_loss: 2.71438932419
+Dev_Exact_match: 0.46
+Dev_F1_score: 0.594058402569
+
+Train_loss: 2.24356818199
+Dev_loss: 2.60630917549
+Dev_Exact_match: 0.51
+Dev_F1_score: 0.646261904762
+
+Train_loss: 2.84503173828
+Dev_loss: 2.24356818199
+Dev_Exact_match: 0.45
+Dev_F1_score: 0.564536788882
+
+Train_loss: 2.46465468407
+Dev_loss: 2.84503173828
+Dev_Exact_match: 0.41
+Dev_F1_score: 0.569750846979
+=============Epoch: 20
+
+Train_loss: 2.49185228348
+Dev_loss: 2.46465468407
+Dev_Exact_match: 0.42
+Dev_F1_score: 0.561884458134
+
+Train_loss: 2.65098929405
+Dev_loss: 2.49185228348
+Dev_Exact_match: 0.46
+Dev_F1_score: 0.568636807637
+
+Train_loss: 3.13408017159
+Dev_loss: 2.65098929405
+Dev_Exact_match: 0.4
+Dev_F1_score: 0.530018073155
+
+Train_loss: 2.76557469368
+Dev_loss: 3.13408017159
+Dev_Exact_match: 0.43
+Dev_F1_score: 0.558236171236
+
+Train_loss: 2.67037582397
+Dev_loss: 2.76557469368
+Dev_Exact_match: 0.45
+Dev_F1_score: 0.571120712621
+
+Train_loss: 2.3221051693
+Dev_loss: 2.67037582397
+Dev_Exact_match: 0.4
+Dev_F1_score: 0.610647619048
+
+Train_loss: 2.4462018013
+Dev_loss: 2.3221051693
+Dev_Exact_match: 0.46
+Dev_F1_score: 0.599248123687
+
+Train_loss: 2.02477049828
+Dev_loss: 2.4462018013
+Dev_Exact_match: 0.52
+Dev_F1_score: 0.673359153918
+
+Train_loss: 2.33864402771
+Dev_loss: 2.02477049828
+Dev_Exact_match: 0.46
+Dev_F1_score: 0.608983193277
+
+Train_loss: 2.29211187363
+Dev_loss: 2.33864402771
+Dev_Exact_match: 0.43
+Dev_F1_score: 0.591047501518
+
+Train_loss: 2.36052775383
+Dev_loss: 2.29211187363
+Dev_Exact_match: 0.42
+Dev_F1_score: 0.573664465651
+
+Train_loss: 2.92641210556
+Dev_loss: 2.36052775383
+Dev_Exact_match: 0.42
+Dev_F1_score: 0.584035382918
+
+Train_loss: 2.86265444756
+Dev_loss: 2.92641210556
+Dev_Exact_match: 0.34
+Dev_F1_score: 0.474959269386
+
+Train_loss: 2.17469668388
+Dev_loss: 2.86265444756
+Dev_Exact_match: 0.47
+Dev_F1_score: 0.598722904546
+
+Train_loss: 2.85123538971
+Dev_loss: 2.17469668388
+Dev_Exact_match: 0.37
+Dev_F1_score: 0.519361765513
+
+Train_loss: 3.05029296875
+Dev_loss: 2.85123538971
+Dev_Exact_match: 0.43
+Dev_F1_score: 0.536515873016
+
+Train_loss: 2.36980199814
+Dev_loss: 3.05029296875
+Dev_Exact_match: 0.47
+Dev_F1_score: 0.640122100122
+
+Train_loss: 2.79374432564
+Dev_loss: 2.36980199814
+Dev_Exact_match: 0.44
+Dev_F1_score: 0.544111111111
+
+Train_loss: 2.20125198364
+Dev_loss: 2.79374432564
+Dev_Exact_match: 0.42
+Dev_F1_score: 0.568344887955
+
+Train_loss: 2.42924332619
+Dev_loss: 2.20125198364
+Dev_Exact_match: 0.46
+Dev_F1_score: 0.630617604618
+
+Train_loss: 2.15827131271
+Dev_loss: 2.42924332619
+Dev_Exact_match: 0.52
+Dev_F1_score: 0.642240183793
