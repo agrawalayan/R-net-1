@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+#used for training Question Generation Model
 from __future__ import print_function
 import argparse
 import os

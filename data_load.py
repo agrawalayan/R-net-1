@@ -478,7 +478,7 @@ def loading_data(filename1, filename2, filename3, filename4, filename5):
     return word_mat, char_mat, train_eval_file, dev_eval_file, meta
 
 
-
+#load the data after preprocessing is done
 def load_data(dir_):
     # Target indices
     indices = load_target(dir_ + Params.target_dir)

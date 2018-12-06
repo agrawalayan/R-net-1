@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #/usr/bin/python2
-
+#this is used for preprocessing the data
 import cPickle as pickle
 import numpy as np
 import json
@@ -353,7 +353,7 @@ def convert_idx(text, tokens):
         current += len(token)
     return spans
 
-
+#after running the process.py file, the control comes here and preprocessing of the word embeddings, encoding and decoding takes place
 def main():
     if args.reduce_glove:
         word_counter, char_counter = Counter(), Counter()

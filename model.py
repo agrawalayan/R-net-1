@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #/usr/bin/python2
-
+#this is used for answer generation training and evaluation
 from __future__ import print_function
 
 import tensorflow as tf
@@ -10,7 +10,6 @@ from data_load import cudnn_gru, native_gru, dot_attention, summ, dropout, ptr_n
 from params import Params
 from layers import *
 from GRU import gated_attention_Wrapper, GRUCell, SRUCell
-#from evaluate import *
 import numpy as np
 import cPickle as pickle
 from process import *
@@ -397,7 +396,8 @@ def evaluate_batch(model, num_batches, eval_file, sess, data_type, handle, str_h
         tag="{}/em".format(data_type), simple_value=metrics["exact_match"]), ])
     return metrics, [loss_sum, f1_sum, em_sum]
 
-
+#load the data
+#train the model and evaluate the metric parameters
 def main():
     word_mat, char_mat, train_eval_file, dev_eval_file, meta  = loading_data(Params.word_emb_file, Params.char_emb_file, Params.train_eval_file, Params.dev_eval_file, Params.dev_meta)
     dev_total = meta["total"]

@@ -1,8 +1,6 @@
+#all the parameters used for Answer Generation model
 import os
 import tensorflow as tf
-
-
-
 flags = tf.flags
 os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
 
