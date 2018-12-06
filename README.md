@@ -65,4 +65,4 @@ python NP2P_beam_decoder.py --model_prefix xxx --in_path yyy --out_path zzz --mo
 
 ### Demo Purpose
 Run the script - 
-python inference.py
+python demo.py

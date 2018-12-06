@@ -56,25 +56,24 @@
         </style>
     </head>
     <body>
-		<h1 align="center">Reading Comprehension Project</h1>
-        <textarea id='passage' placeholder='Your passage here' rows = "10" cols="100"></textarea>
-        <br>
-        <br>
-        <br>
+		<h3 align="center">Reading Comprehension Project</h3>
+        <textarea id='passage' placeholder='Your passage here' rows = "8" cols="100"></textarea>
         <div class = "Reading_Comprehension">
-			
             <div id = "answer_generation">
-				<h2 align="center">Answer Generation</h2>
-                <textarea id='question' placeholder='Your Question here' rows = "4" cols="60"></textarea>
-                <br>
+				<h4 align="center">Answer Generation</h4>
+				<h5>Question</h5>
+                <textarea id='question' placeholder='Your Question here' rows = "3" cols="60"></textarea>
+				<h5>Ground Truth Answer</h5>
+				<textarea id='groudtruthanswer' placeholder='Groud Truth Answer' rows = "3" cols="60"></textarea><br>
                 <button id='GetAnswer'>Get Answer</button>
                 <p id='print_answer'>Generated Answer</p>
             </div>
             <div id = "question_generation">
-				<h2 align="center">Question Generation</h2>
-                <textarea id='question1' placeholder='Your Truth Question here' rows = "4" cols="60"></textarea>
-                <br>
-                <textarea id='answer' placeholder='Your Answer here' rows = "4" cols="60"></textarea>
+				<h4 align="center">Question Generation</h4>
+				<h5>Ground Truth Question</h5>
+                <textarea id='question1' placeholder='Your Truth Question here' rows = "3" cols="60"></textarea>
+                <h5>Answer</h5>
+                <textarea id='answer' placeholder='Your Answer here' rows = "3" cols="60"></textarea>
                 <br>
                 <button id='GetQuestion'>Get Question</button>
                 <p id='print_question'>Generated Question</p>
