@@ -1,9 +1,10 @@
 # Dual Question-Answer Generator for Machine Reading Comprehension
 
 Answer Generation Implementation - https://www.microsoft.com/en-us/research/wp-content/uploads/2017/05/r-net.pdf
+Question Generation Implementation - http://www.aclweb.org/anthology/N18-2090
 ![Alt text](/../master/screenshots/architecture.png?raw=true "R-NET")
 
-Question Generation Implementation - http://www.aclweb.org/anthology/N18-2090
+
 
 The dataset used for this task is Stanford Question Answering Dataset (https://rajpurkar.github.io/SQuAD-explorer/). 
 Pretrained GloVe embeddings are used for both words (https://nlp.stanford.edu/projects/glove/) and 
@@ -27,7 +28,7 @@ $ pipenv shell
 $ python process.py --reduce_glove True --process True
 ```
 
-### Data format for Question Generation
+### Data format for Question Generation [here](https://www.cs.rochester.edu/~lsong10/downloads/nqg_data.tgz)
 
 ```
 [{"text1":"IBM is headquartered in Armonk , NY .", 
@@ -62,5 +63,5 @@ python NP2P_beam_decoder.py --model_prefix xxx --in_path yyy --out_path zzz --mo
 ```
 
 ### Demo Purpose
-Run the script
+Run the script - 
 python inference.py
